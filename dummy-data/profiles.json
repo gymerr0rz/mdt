@@ -30,8 +30,13 @@
         "warrant_active": true
       }
     ],
-    "businesses": [],
-    "properties": [],
+    "job": "Los Santos Police",
+    "apartment": [
+      {
+        "location": "Occupation Apartment",
+        "number": 12
+      }
+    ],
     "criminal_history": [],
     "licences": [],
     "weapons": []
@@ -49,7 +54,7 @@
       {
         "vehicle_name": "flatbed",
         "plate": "#R24392QN",
-        "warrant_active": false
+        "warrant_active": true
       },
       {
         "vehicle_name": "flatbed",
@@ -67,8 +72,13 @@
         "warrant_active": true
       }
     ],
-    "businesses": [],
-    "properties": [],
+    "job": "Los Santos Police",
+    "apartment": [
+      {
+        "location": "Occupation Apartment",
+        "number": 12
+      }
+    ],
     "criminal_history": [],
     "licences": [],
     "weapons": []
@@ -104,8 +114,13 @@
         "warrant_active": true
       }
     ],
-    "businesses": [],
-    "properties": [],
+    "job": "Los Santos Police",
+    "apartment": [
+      {
+        "location": "Occupation Apartment",
+        "number": 12
+      }
+    ],
     "criminal_history": [],
     "licences": [],
     "weapons": []
@@ -141,8 +156,13 @@
         "warrant_active": true
       }
     ],
-    "businesses": [],
-    "properties": [],
+    "job": "Los Santos Police",
+    "apartment": [
+      {
+        "location": "Occupation Apartment",
+        "number": 12
+      }
+    ],
     "criminal_history": [],
     "licences": [],
     "weapons": []
@@ -178,8 +198,13 @@
         "warrant_active": true
       }
     ],
-    "businesses": [],
-    "properties": [],
+    "job": "Los Santos Police",
+    "apartment": [
+      {
+        "location": "Occupation Apartment",
+        "number": 12
+      }
+    ],
     "criminal_history": [],
     "licences": [],
     "weapons": []

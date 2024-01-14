@@ -7,7 +7,7 @@ export default function Profiles() {
     <>
       <main className="flex">
         <MbtNavbar />
-        <div className="p-5 w-full">
+        <div className="px-5 py-10 w-full">
           <SearchBar />
         </div>
       </main>

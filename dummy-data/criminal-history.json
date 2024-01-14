@@ -1,0 +1,98 @@
+[
+  {
+    "value": "next.js",
+    "label": "Simple Assault",
+    "fine": 300,
+    "category": 1
+  },
+  {
+    "value": "sveltekit",
+    "label": "Assault",
+    "fine": 300,
+    "category": 1
+  },
+  {
+    "value": "nuxt.js",
+    "label": "Aggravated Assault",
+    "fine": 300,
+    "category": 1
+  },
+  {
+    "value": "remix",
+    "label": "Simple Assault of LEO",
+    "fine": 300,
+    "category": 1
+  },
+  {
+    "value": "astro",
+    "label": "Assault of LEO",
+    "fine": 300,
+    "category": 1
+  },
+  {
+    "value": "astroa",
+    "label": "Aggravated Assault of LEO",
+    "fine": 300,
+    "category": 1
+  },
+  {
+    "value": "astrob",
+    "label": "Simple Battery",
+    "fine": 300,
+    "category": 1
+  },
+  {
+    "value": "astroc",
+    "label": "Battery",
+    "fine": 300,
+    "category": 1
+  },
+  {
+    "value": "next.jsh",
+    "label": "Simple Assault",
+    "fine": 300,
+    "category": 1
+  },
+  {
+    "value": "sveltekith",
+    "label": "Assault",
+    "fine": 300,
+    "category": 1
+  },
+  {
+    "value": "nuxt.jsh",
+    "label": "Aggravated Assault",
+    "fine": 300,
+    "category": 1
+  },
+  {
+    "value": "remixh",
+    "label": "Simple Assault of LEO",
+    "fine": 300,
+    "category": 1
+  },
+  {
+    "value": "astroh",
+    "label": "Assault of LEO",
+    "fine": 300,
+    "category": 1
+  },
+  {
+    "value": "astroah",
+    "label": "Aggravated Assault of LEO",
+    "fine": 300,
+    "category": 1
+  },
+  {
+    "value": "astrobh",
+    "label": "Simple Battery",
+    "fine": 300,
+    "category": 1
+  },
+  {
+    "value": "astroch",
+    "label": "Battery",
+    "fine": 300,
+    "category": 1
+  }
+]
