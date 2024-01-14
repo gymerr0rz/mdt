@@ -43,15 +43,6 @@
   }
 }
 
-::-moz-selection {
-  /* Code for Firefox */
-  background: #3ce7d2;
-}
-
-::selection {
-  background: #3ce7d2;
-}
-
 /* Scroll Customization */
 
 ::-webkit-scrollbar {
