@@ -73,6 +73,10 @@ module.exports = {
           from: { height: '0' },
           to: { height: 'var(--radix-accordion-content-height)' },
         },
+        'opacity-down': {
+          from: { transform: 'translateY(-15px)', opacity: 0 },
+          to: { transform: 'translateY(0)', opacity: 1 },
+        },
         'accordion-up': {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
@@ -81,6 +85,7 @@ module.exports = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'opacity-down': 'opacity-down 1s ease-out',
       },
     },
   },

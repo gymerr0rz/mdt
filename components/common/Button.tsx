@@ -9,13 +9,14 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-primary text-background hover:bg-primary/90',
+        default: 'bg-4 hover:bg-4/60',
+        'red-hover': 'bg-4 hover:bg-6/60',
         'icon-green': 'bg-4 hover:bg-4/60',
         'icon-red': 'bg-6 hover:bg-6/60',
       },
 
       size: {
-        default: 'h-10 px-4 py-2',
+        default: 'h-10 px-4 py-2 rounded-[10px] font-kulim font-[600]',
         sm: 'h-9 rounded-xl px-3',
         lg: 'h-11 rounded-xl px-8',
         xl: 'h-11 rounded-xl px-6',

@@ -70,18 +70,17 @@ export default function LabelButton({
                 </svg>
               )}
             </div>
-            <Button div>
+            <Button div variant="red-hover" className="group">
               <svg
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+                className="group-hover:stroke-7 stroke-1 transition-colors"
               >
                 <g filter="url(#filter0_d_17_598)">
                   <path
                     d="M8.46448 8.46436L15.5355 15.5354"
-                    stroke="#3CE7D2"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -90,7 +89,6 @@ export default function LabelButton({
                 <g filter="url(#filter1_d_17_598)">
                   <path
                     d="M15.5355 8.46436L8.46445 15.5354"
-                    stroke="#3CE7D2"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"

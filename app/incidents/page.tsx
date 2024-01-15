@@ -1,12 +1,10 @@
 import MbtNavbar from '@/components/common/MbtNavbar';
-import SearchBar from '@/components/common/SearchBar';
 import { Button } from '@/components/common/Button';
 import Label from '@/components/common/Label';
-import { ComboboxDemo } from '@/components/common/Select';
-import ListCriminalHistory from '@/dummy-data/criminal-history.json';
 import { IncidentsAccordion } from '@/components/common/IncidentsAccordion';
-import InputImage from '../../components/common/InputImage';
-import SuspectInvolved from '../../components/common/SuspectInvolved';
+import InputImage from '@/components/common/InputImage';
+import SuspectInvolved from '@/components/common/SuspectInvolved';
+import SearchIncidents from '@/components/common/SearchIncidents';
 
 export default function Incidents() {
   return (
@@ -55,6 +53,7 @@ export default function Incidents() {
               </svg>
             </Button>
             <span className="font-kulim font-bold">Incidents</span>
+            <SearchIncidents />
           </div>
           <IncidentsAccordion />
         </div>
@@ -153,6 +152,10 @@ Plead:`}
             <Label theme="green">Boris Lawyer</Label>
           </div>
           <SuspectInvolved suspect_name="Jean Paul" suspect_warrant="Arrest" />
+          <SuspectInvolved
+            suspect_name="Boris Lawyer"
+            suspect_warrant="Arrest"
+          />
         </div>
       </div>
     </main>

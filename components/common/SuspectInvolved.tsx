@@ -173,7 +173,96 @@ export default function SuspectInvolved({
           Reckless Evading
         </LabelButton>
       </span>
-      <span></span>
+      <span className="grid grid-flow-col-dense gap-2 py-3">
+        {/* Send the Fine */}
+        <Button variant="default" size="default" className="flex gap-1">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 12 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g filter="url(#filter0_d_17_679)">
+              <path
+                d="M6 3V13"
+                stroke="#3CE7D2"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8.5 4.5H4.75C4.28587 4.5 3.84075 4.68437 3.51256 5.01256C3.18437 5.34075 3 5.78587 3 6.25C3 6.71413 3.18437 7.15925 3.51256 7.48744C3.84075 7.81563 4.28587 8 4.75 8H7.25C7.71413 8 8.15925 8.18438 8.48744 8.51256C8.81563 8.84075 9 9.28587 9 9.75C9 10.2141 8.81563 10.6592 8.48744 10.9874C8.15925 11.3156 7.71413 11.5 7.25 11.5H3"
+                stroke="#3CE7D2"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+          </svg>
+          Send the fine
+        </Button>
+        {/* Send to Jail */}
+        <Button variant="default" size="default" className="flex gap-1">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g filter="url(#filter0_d_17_673)">
+              <path
+                d="M4 3V11"
+                stroke="#3CE7D2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M6.5 3V11"
+                stroke="#3CE7D2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9 3V11"
+                stroke="#3CE7D2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M11.5 3V11"
+                stroke="#3CE7D2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M13 4L3 10"
+                stroke="#3CE7D2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+          </svg>
+          Send to Jail
+        </Button>
+        {/* Community Service */}
+        <Button variant="default" size="default" className="flex gap-1">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.6055 0.855469L6.85547 4.60547L6.375 4.125V4.11328L6.36328 4.10156C6.12305 3.8877 5.80957 3.78516 5.50781 3.78516C5.20605 3.78516 4.91455 3.89795 4.6875 4.125L4.62891 4.17188L4.44141 4.35938L4.3125 4.46484L0.890625 7.125L0.5625 7.39453L4.60547 11.4375L4.875 11.1094L7.52344 7.71094L7.53516 7.72266L7.91016 7.34766H7.92188L7.93359 7.33594C8.36133 6.854 8.36426 6.11426 7.91016 5.66016L7.39453 5.14453L11.1445 1.39453L10.6055 0.855469ZM5.50781 4.53516C5.62354 4.53223 5.75098 4.57178 5.84766 4.65234C5.85205 4.65527 5.85498 4.66113 5.85938 4.66406L7.38281 6.1875C7.52344 6.32812 7.53662 6.62695 7.38281 6.82031C7.37695 6.82764 7.37695 6.83643 7.37109 6.84375L7.25391 6.94922L5.08594 4.78125L5.21484 4.65234C5.28662 4.58057 5.39209 4.53809 5.50781 4.53516ZM4.51172 5.26172L6.73828 7.48828L4.53516 10.3008L3.99609 9.76172L4.80469 8.91797L4.26562 8.40234L3.46875 9.23438L2.97656 8.74219L4.42969 7.27734L3.90234 6.75L2.4375 8.20312L1.69922 7.46484L4.51172 5.26172Z"
+              fill="#3CE7D2"
+            />
+          </svg>
+          Community Service
+        </Button>
+      </span>
     </div>
   );
 }
