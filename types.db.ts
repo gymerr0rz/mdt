@@ -1,24 +1,11 @@
-export interface Person {
-  id: string;
-  name: string;
-  profile_url: string;
-  phone_number: string;
-  fingerprint: string;
-  dna: string;
-  summary: string;
-  tags: string[];
-  vehicles: Vehicle[];
-  job: string;
-  apartment: Apartment;
-  criminal_history: any[];
-  licences: any[];
-  weapons: any[];
+export interface Vehicle {
+  vehicle_model: string;
+  bolo: boolean;
 }
 
-export interface Vehicle {
-  vehicle_name: string;
-  plate: string;
-  warrant_active: boolean;
+export interface License {
+  name: string;
+  state: boolean;
 }
 
 export interface Apartment {
@@ -26,12 +13,41 @@ export interface Apartment {
   property_number: number;
 }
 
-export interface Criminal {
-  convinction: number;
-  history: CriminalHistory[];
+export interface CriminalHistory {
+  title: string;
+  incident_id: number;
 }
 
-export interface CriminalHistory {
-  officer: string;
-  crime_name: string;
+export interface Tag {
+  tag_name: string;
+}
+
+export interface Weapon {
+  weapon_model: string;
+  weapon_id: number;
+}
+
+export interface Person {
+  id: string;
+  name: string;
+  profile_url: string;
+  warrant: boolean;
+  phone_number: string;
+  fingerprint: string;
+  dna: string;
+  summary: string;
+  job: string;
+  tags: Tag[];
+  vehicles: Vehicle[];
+  apartment: Apartment;
+  criminal_history: CriminalHistory[];
+  licences: License[];
+  weapons: Weapon[];
+}
+
+export interface Incident {
+  incident_name: string;
+  incident_id: number;
+  incident_summary: string;
+  evidence: { image_url: string };
 }

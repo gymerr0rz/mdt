@@ -1,18 +1,18 @@
 [
   {
-    "value": "next.js",
+    "value": "Simple Assault",
     "label": "Simple Assault",
     "fine": 300,
     "category": 1
   },
   {
-    "value": "sveltekit",
+    "value": "Assault",
     "label": "Assault",
     "fine": 300,
     "category": 1
   },
   {
-    "value": "nuxt.js",
+    "value": "Aggravated Assault",
     "label": "Aggravated Assault",
     "fine": 300,
     "category": 1

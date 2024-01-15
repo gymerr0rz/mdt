@@ -5,7 +5,7 @@ import Profiles from '@/dummy-data/profiles.json';
 import { Person } from '@/types.db';
 import Link from 'next/link';
 
-export default function SearchBar() {
+export default function SearchIncidents() {
   const [data] = React.useState<Person[]>(Profiles);
   const [results, setResults] = React.useState<Person[]>();
 

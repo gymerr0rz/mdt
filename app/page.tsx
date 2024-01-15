@@ -3,9 +3,8 @@ import SearchBar from '@/components/common/SearchBar';
 import { Button } from '@/components/common/Button';
 import Label from '@/components/common/Label';
 import { ComboboxDemo } from '@/components/common/Select';
-import ListTags from '@/dummy-data/tags.json';
 import ListCriminalHistory from '@/dummy-data/criminal-history.json';
-import { AccordionDemo } from '@/components/common/RecentCalls';
+import { RecentCalls } from '@/components/common/RecentCalls';
 
 export default function Dispatch() {
   return (
@@ -36,7 +35,7 @@ export default function Dispatch() {
             </Button>
             <span className="font-kulim font-bold">Recent Calls</span>
           </div>
-          <AccordionDemo />
+          <RecentCalls />
         </div>
 
         <div className=" w-1/3 flex flex-col gap-5">

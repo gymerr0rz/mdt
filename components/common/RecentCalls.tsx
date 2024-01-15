@@ -6,7 +6,7 @@ import {
 } from '@/components/ui/accordion';
 import { Button } from './Button';
 
-export function AccordionDemo() {
+export function RecentCalls() {
   return (
     <Accordion type="single" collapsible className="w-full flex flex-col gap-5">
       <AccordionItem value="item-1" className="flex flex-col gap-5">
@@ -61,8 +61,10 @@ export function AccordionDemo() {
         </div>
 
         <AccordionContent>
-          <div className="p-5  from-2 from-40%  bg-gradient-to-r to-transparent grid grid-cols-2 gap-5">
-            <h1 className="col-span-2 text-base font-medium">Vehicle Theft</h1>
+          <div className="p-5  from-2 from-40%  bg-gradient-to-r to-transparent grid grid-cols-2 gap-5 relative">
+            <h1 className="absolute p-5 top-0 right-0 text-sm text-3 font-bold font-kulim">
+              14 minutes ago
+            </h1>
             <div className="flex flex-col">
               <label className="text-xs uppercase tracking-[0.2em] font-kulim text-1 font-bold flex gap-2 items-center">
                 <svg
@@ -233,7 +235,10 @@ export function AccordionDemo() {
         </div>
 
         <AccordionContent>
-          <div className="p-5  from-2 from-40%  bg-gradient-to-r to-transparent grid grid-cols-2 gap-5">
+          <div className="p-5  from-2 from-40%  bg-gradient-to-r to-transparent grid grid-cols-2 gap-5 relative">
+            <h1 className="absolute p-5 top-0 right-0 text-sm text-3 font-bold font-kulim">
+              14 minutes ago
+            </h1>
             <h1 className="col-span-2 text-base font-medium">Vehicle Theft</h1>
             <div className="flex flex-col">
               <label className="text-xs uppercase tracking-[0.2em] font-kulim text-1 font-bold flex gap-2 items-center">
@@ -405,7 +410,10 @@ export function AccordionDemo() {
         </div>
 
         <AccordionContent>
-          <div className="p-5  from-2 from-40%  bg-gradient-to-r to-transparent grid grid-cols-2 gap-5">
+          <div className="p-5  from-2 from-40%  bg-gradient-to-r to-transparent grid grid-cols-2 gap-5 relative">
+            <h1 className="absolute p-5 top-0 right-0 text-sm text-3 font-bold font-kulim">
+              14 minutes ago
+            </h1>
             <h1 className="col-span-2 text-base font-medium">Vehicle Theft</h1>
             <div className="flex flex-col">
               <label className="text-xs uppercase tracking-[0.2em] font-kulim text-1 font-bold flex gap-2 items-center">

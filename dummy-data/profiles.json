@@ -3,6 +3,7 @@
     "id": "#DXD97145",
     "name": "Jeremy Lin",
     "profile_url": "https://i.imgur.com/nNmmMp",
+    "warrant": true,
     "phone_number": "0123-456-789",
     "fingerprint": "ANSIDO2190N90DN20912",
     "dna": "MVIOON9DF8908213E09NO",
@@ -10,24 +11,20 @@
     "tags": [],
     "vehicles": [
       {
-        "vehicle_name": "flatbed",
-        "plate": "#R24392QN",
-        "warrant_active": false
+        "vehicle_model": "Karuma",
+        "bolo": true
       },
       {
-        "vehicle_name": "flatbed",
-        "plate": "#R24392QN",
-        "warrant_active": false
+        "vehicle_model": "Salten",
+        "bolo": false
       },
       {
-        "vehicle_name": "flatbed",
-        "plate": "#R24392QN",
-        "warrant_active": false
+        "vehicle_model": "Fudgio",
+        "bolo": false
       },
       {
-        "vehicle_name": "flatbed",
-        "plate": "#R24392QN",
-        "warrant_active": true
+        "vehicle_model": "Charger",
+        "bolo": true
       }
     ],
     "job": "Los Santos Police",
@@ -45,6 +42,7 @@
     "id": "#FNF55131",
     "name": "Johhny Laroy",
     "profile_url": "https://i.imgur.com/nNmmMp",
+    "warrant": false,
     "phone_number": "0123-456-789",
     "fingerprint": "ANSIDO2190N90DN20912",
     "dna": "MVIOON9DF8908213E09NO",
@@ -52,24 +50,20 @@
     "tags": [],
     "vehicles": [
       {
-        "vehicle_name": "flatbed",
-        "plate": "#R24392QN",
-        "warrant_active": true
+        "vehicle_model": "Karuma",
+        "bolo": true
       },
       {
-        "vehicle_name": "flatbed",
-        "plate": "#R24392QN",
-        "warrant_active": false
+        "vehicle_model": "Salten",
+        "bolo": false
       },
       {
-        "vehicle_name": "flatbed",
-        "plate": "#R24392QN",
-        "warrant_active": false
+        "vehicle_model": "Fudgio",
+        "bolo": false
       },
       {
-        "vehicle_name": "flatbed",
-        "plate": "#R24392QN",
-        "warrant_active": true
+        "vehicle_model": "Charger",
+        "bolo": true
       }
     ],
     "job": "Los Santos Police",
@@ -87,6 +81,7 @@
     "id": "#GGG53934",
     "name": "Lucas Fork",
     "profile_url": "https://i.imgur.com/nNmmMp",
+    "warrant": false,
     "phone_number": "0123-456-789",
     "fingerprint": "ANSIDO2190N90DN20912",
     "dna": "MVIOON9DF8908213E09NO",
@@ -94,24 +89,20 @@
     "tags": [],
     "vehicles": [
       {
-        "vehicle_name": "flatbed",
-        "plate": "#R24392QN",
-        "warrant_active": false
+        "vehicle_model": "Karuma",
+        "bolo": true
       },
       {
-        "vehicle_name": "flatbed",
-        "plate": "#R24392QN",
-        "warrant_active": false
+        "vehicle_model": "Salten",
+        "bolo": false
       },
       {
-        "vehicle_name": "flatbed",
-        "plate": "#R24392QN",
-        "warrant_active": false
+        "vehicle_model": "Fudgio",
+        "bolo": false
       },
       {
-        "vehicle_name": "flatbed",
-        "plate": "#R24392QN",
-        "warrant_active": true
+        "vehicle_model": "Charger",
+        "bolo": true
       }
     ],
     "job": "Los Santos Police",
@@ -129,6 +120,7 @@
     "id": "#LLL93823",
     "name": "Nicholas Maluk",
     "profile_url": "https://i.imgur.com/nNmmMp",
+    "warrant": false,
     "phone_number": "0123-456-789",
     "fingerprint": "ANSIDO2190N90DN20912",
     "dna": "MVIOON9DF8908213E09NO",
@@ -136,24 +128,20 @@
     "tags": [],
     "vehicles": [
       {
-        "vehicle_name": "flatbed",
-        "plate": "#R24392QN",
-        "warrant_active": false
+        "vehicle_model": "Karuma",
+        "bolo": true
       },
       {
-        "vehicle_name": "flatbed",
-        "plate": "#R24392QN",
-        "warrant_active": false
+        "vehicle_model": "Salten",
+        "bolo": false
       },
       {
-        "vehicle_name": "flatbed",
-        "plate": "#R24392QN",
-        "warrant_active": false
+        "vehicle_model": "Fudgio",
+        "bolo": false
       },
       {
-        "vehicle_name": "flatbed",
-        "plate": "#R24392QN",
-        "warrant_active": true
+        "vehicle_model": "Charger",
+        "bolo": true
       }
     ],
     "job": "Los Santos Police",
@@ -171,6 +159,7 @@
     "id": "#DXD97145",
     "name": "Ryan Hold",
     "profile_url": "https://i.imgur.com/nNmmMp",
+    "warrant": false,
     "phone_number": "0123-456-789",
     "fingerprint": "ANSIDO2190N90DN20912",
     "dna": "MVIOON9DF8908213E09NO",
@@ -178,24 +167,20 @@
     "tags": [],
     "vehicles": [
       {
-        "vehicle_name": "flatbed",
-        "plate": "#R24392QN",
-        "warrant_active": false
+        "vehicle_model": "Karuma",
+        "bolo": true
       },
       {
-        "vehicle_name": "flatbed",
-        "plate": "#R24392QN",
-        "warrant_active": false
+        "vehicle_model": "Salten",
+        "bolo": false
       },
       {
-        "vehicle_name": "flatbed",
-        "plate": "#R24392QN",
-        "warrant_active": false
+        "vehicle_model": "Fudgio",
+        "bolo": false
       },
       {
-        "vehicle_name": "flatbed",
-        "plate": "#R24392QN",
-        "warrant_active": true
+        "vehicle_model": "Charger",
+        "bolo": true
       }
     ],
     "job": "Los Santos Police",

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Vehicle License",
+    "state": false
+  },
+  {
+    "name": "Pilot License",
+    "state": false
+  },
+  {
+    "name": "Weapon License",
+    "state": false
+  },
+  {
+    "name": "Hunting License",
+    "state": false
+  },
+  {
+    "name": "Fishing License",
+    "state": false
+  },
+  {
+    "name": "Motor License",
+    "state": false
+  }
+]

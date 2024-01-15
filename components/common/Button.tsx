@@ -19,36 +19,50 @@ const buttonVariants = cva(
         sm: 'h-9 rounded-xl px-3',
         lg: 'h-11 rounded-xl px-8',
         xl: 'h-11 rounded-xl px-6',
-        'icon-sm': 'h-8 w-8 rounded-[5px]',
-        'icon-lg': 'max-h-12 max-w-12 min-w-12 min-h-12 rounded-[5px]',
+        'icon-xs': 'max-h-6 max-w-6 min-w-6 min-h-6 rounded-[2.5px]',
+        'icon-sm': 'max-h-8 max-w-8 min-w-8 min-h-8 rounded-[5px]',
+        'icon-lg': 'max-h-12 max-w-12 min-w-12 min-h-12 rounded-[10px]',
         custom: '',
       },
     },
     defaultVariants: {
-      variant: 'default',
-      size: 'default',
+      variant: 'icon-green',
+      size: 'icon-sm',
     },
   }
 );
 
 interface ButtonProps
-  extends HTMLAttributes<HTMLButtonElement>,
+  extends HTMLAttributes<HTMLButtonElement | HTMLDivElement>,
     VariantProps<typeof buttonVariants> {
   children: React.ReactNode;
+  div?: boolean;
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, children, ...props }, ref) => {
+const Button = React.forwardRef<
+  HTMLButtonElement | HTMLDivElement,
+  ButtonProps
+>(({ className, variant, size, children, div = false, ...props }, ref) => {
+  if (div) {
     return (
-      <button
+      <div
         className={cn(buttonVariants({ variant, size, className }))}
         {...props}
       >
         {children}
-      </button>
+      </div>
     );
   }
-);
+
+  return (
+    <button
+      className={cn(buttonVariants({ variant, size, className }))}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+});
 
 Button.displayName = 'Button';
 

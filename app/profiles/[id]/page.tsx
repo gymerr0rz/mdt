@@ -182,7 +182,10 @@ export default function DisplayProfile({ params }: { params: { id: string } }) {
             {/* Tags */}
             <div className="w-full bg-2 to-transparent flex px-5 h-12 justify-between items-center">
               <span className="font-kulim font-bold">Tags</span>
-              <ComboboxDemo placeholder="Search Tags..." list={ListTags}>
+              <ComboboxDemo
+                placeholder="Search Tags..."
+                list={ListCriminalHistory}
+              >
                 <Button variant="icon-green" size="icon-sm">
                   <svg
                     width="12"
@@ -214,14 +217,14 @@ export default function DisplayProfile({ params }: { params: { id: string } }) {
               <div className="w-full bg-2 to-transparent flex px-5 h-12 items-center justify-between">
                 <span className="font-kulim font-bold">Vehicles</span>
               </div>
-              <div className="grid grid-cols-3 gap-4 items-center justify-center">
+              <div className="grid grid-cols-4 gap-4 items-center justify-center">
                 {Profile.vehicles.map((vehicle, idx) => (
                   <Label
-                    theme={`${vehicle.warrant_active ? 'red' : 'green'}`}
+                    theme={`${vehicle.bolo ? 'red' : 'green'}`}
                     key={idx}
-                    warning={vehicle.warrant_active}
+                    warning={vehicle.bolo}
                   >
-                    #R24939QN flatbed
+                    {vehicle.vehicle_model}
                   </Label>
                 ))}
               </div>
@@ -262,9 +265,9 @@ export default function DisplayProfile({ params }: { params: { id: string } }) {
                 {' '}
               </ComboboxDemo>
             </div>
-            {/* Licenceses */}
+            {/* Licenses */}
             <div className="w-full bg-2 to-transparent flex px-5 h-12 justify-between items-center">
-              <span className="font-kulim font-bold">Licenceses</span>
+              <span className="font-kulim font-bold">Licenses</span>
               <ComboboxDemo
                 placeholder="Search Criminal Fines..."
                 list={ListCriminalHistory}

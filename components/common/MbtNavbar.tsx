@@ -272,7 +272,7 @@ export default function MbtNavbar() {
                 viewBox="0 0 24 24"
                 fill="none"
                 className={` transition-colors ${
-                  path === '/sopss'
+                  path === '/sops'
                     ? 'group-hover:fill-3 fill-1'
                     : 'fill-3 group-hover:fill-1'
                 }`}
