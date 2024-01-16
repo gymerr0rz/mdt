@@ -21,14 +21,14 @@ export default function SuspectInvolved({
   suspect_name,
   suspect_warrant,
 }: Suspect) {
-  const [reduction, setReduction] = React.useState<number>(20);
+  const [reduction, setReduction] = React.useState<number>(5);
   const [defaultFine, setDefaultFine] = React.useState<number>(360);
   const [fine, setFine] = React.useState<number>(defaultFine);
 
   function adjustDiscount() {
     setFine(Math.floor((defaultFine * (100 - reduction)) / 100));
 
-    setReduction((red) => (red + 20) % 120);
+    setReduction((red) => (red + 5) % 105);
   }
 
   return (
