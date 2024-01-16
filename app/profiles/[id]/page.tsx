@@ -1,34 +1,70 @@
-import Image from 'next/image';
+'use client';
+
 import MbtNavbar from '@/components/common/MbtNavbar';
 import SearchBar from '@/components/common/SearchBar';
 import Profiles from '@/dummy-data/profiles.json';
-import { Person } from '@/types.db';
 import { Button } from '@/components/common/Button';
 import Input from '@/components/common/Input';
 import Label from '@/components/common/Label';
-import { ComboboxDemo } from '@/components/common/Select';
-import ListTags from '@/dummy-data/tags.json';
+import ListLicenses from '@/dummy-data/licenses.json';
 import ListCriminalHistory from '@/dummy-data/criminal-history.json';
+import { TagsAdd } from '@/components/common/TagAdd';
+import { SelectLicenses } from '@/components/common/SelectLicenses';
+import React from 'react';
+import { Person } from '@/types.db';
 
 export default function DisplayProfile({ params }: { params: { id: string } }) {
-  const profileId = decodeURIComponent(params.id).toLowerCase();
+  const [profile, setProfile] = React.useState<Person | undefined>();
+  const [editStatus, setEditStatus] = React.useState<boolean>(false);
 
-  const ProfileFilter = () =>
-    Profiles.filter((profile) => profile.name.toLowerCase() === profileId);
+  React.useEffect(() => {
+    const profileId = decodeURIComponent(params.id).toLowerCase();
 
-  const Profile = ProfileFilter()[0];
+    const ProfileFilter = () =>
+      Profiles.filter((profile) => profile.name.toLowerCase() === profileId);
 
+    setProfile(ProfileFilter()[0]);
+  }, []);
+
+  if (!profile)
+    return (
+      <main className="flex">
+        <MbtNavbar />
+        <div className="flex flex-col w-full px-5 py-10">
+          <SearchBar />
+          <div className="w-full h-full flex justify-center items-center">
+            <svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              height="50"
+              width="50"
+              className="fill-1 animate-spin"
+            >
+              <path
+                opacity="0.2"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+              ></path>
+              <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"></path>
+            </svg>
+          </div>
+        </div>
+      </main>
+    );
   return (
     <main className="flex">
       <MbtNavbar />
       <div className="flex flex-col w-full px-5 py-10">
         <SearchBar />
-        <div className="w-full flex gap-5">
+        <div className="w-full flex gap-5 animate-opacity-down">
           <div className=" w-2/3 flex flex-col gap-5">
-            <div className="bg-2 w-full px-5 py-2 flex justify-between ">
+            <div className="from-2 from-40%  bg-gradient-to-r to-transparent w-full px-5 py-2 flex justify-between ">
               <h1 className="flex items-center gap-1 font-kulim">
-                {Profile.name}
-                <b className="text-xs text-1 font-light"> ({Profile.id})</b>
+                {profile.name}
+                <b className="text-xs text-1 font-light"> ({profile.id})</b>
               </h1>
 
               <div id="buttons" className="flex gap-2">
@@ -70,6 +106,7 @@ export default function DisplayProfile({ params }: { params: { id: string } }) {
                   className="flex justify-center items-center"
                   variant="icon-green"
                   size="icon-sm"
+                  onClick={() => setEditStatus((prev) => !prev)}
                 >
                   <svg
                     width="24"
@@ -126,19 +163,25 @@ export default function DisplayProfile({ params }: { params: { id: string } }) {
                   placeholder="XXXXXXXX"
                   name="State id"
                   id="state-id"
-                  value={Profile.id}
+                  defaultValue={profile.id}
+                  disabled={!editStatus}
+                  editMode={editStatus}
                 />
                 <Input
                   placeholder="XXXXXXXX"
                   name="Name"
                   id="name"
-                  value={Profile.name}
+                  defaultValue={profile.name}
+                  disabled={!editStatus}
+                  editMode={editStatus}
                 />
                 <Input
                   placeholder="XXXXXXXX"
                   name="Profile Image Url"
                   id="profile-img"
-                  value={Profile.profile_url}
+                  defaultValue={profile.profile_url}
+                  disabled={!editStatus}
+                  editMode={editStatus}
                 />
               </div>
             </div>
@@ -147,19 +190,25 @@ export default function DisplayProfile({ params }: { params: { id: string } }) {
                 placeholder="XXXXXXXX"
                 name="Phone Number"
                 id="phone-number"
-                value={Profile.phone_number}
+                defaultValue={profile.phone_number}
+                disabled={!editStatus}
+                editMode={editStatus}
               />
               <Input
                 placeholder="XXXXXXXX"
                 name="Fingerprint"
                 id="fingerprint"
-                value={Profile.fingerprint}
+                defaultValue={profile.fingerprint}
+                disabled={!editStatus}
+                editMode={editStatus}
               />
               <Input
                 placeholder="XXXXXXXX"
                 name="Dna"
                 id="dna"
-                value={Profile.dna}
+                defaultValue={profile.dna}
+                disabled={!editStatus}
+                editMode={editStatus}
               />
             </div>
             <div>
@@ -173,19 +222,31 @@ export default function DisplayProfile({ params }: { params: { id: string } }) {
                   rows={10}
                   className="bg-transparent resize-none w-full outline-none p-5 font-kulim"
                   placeholder="Write your summary..."
-                  value={Profile.summary}
+                  value={profile.summary}
                 />
               </div>
             </div>
           </div>
           <div className=" w-1/3 flex flex-col gap-5">
             {/* Tags */}
-            <div className="w-full bg-2 to-transparent flex px-5 h-12 justify-between items-center">
-              <span className="font-kulim font-bold">Tags</span>
-              <ComboboxDemo
-                placeholder="Search Tags..."
-                list={ListCriminalHistory}
-              >
+            <div className="w-full from-2 from-40%  bg-gradient-to-r to-transparent flex px-5 h-12 justify-between gap-2 items-center">
+              <span className="flex gap-2 items-center">
+                <Button variant="icon-green" size="icon-sm">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 512 512"
+                    height="16"
+                    width="16"
+                    className="fill-1"
+                  >
+                    <path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"></path>
+                  </svg>
+                </Button>
+                <span className="font-kulim font-bold">Tags</span>
+              </span>
+              <TagsAdd placeholder="Add Tags..." list={ListCriminalHistory}>
                 <Button variant="icon-green" size="icon-sm">
                   <svg
                     width="12"
@@ -210,15 +271,30 @@ export default function DisplayProfile({ params }: { params: { id: string } }) {
                     />
                   </svg>
                 </Button>
-              </ComboboxDemo>
+              </TagsAdd>
             </div>
             {/* Vehicles */}
             <div className="flex flex-col gap-5">
-              <div className="w-full bg-2 to-transparent flex px-5 h-12 items-center justify-between">
-                <span className="font-kulim font-bold">Vehicles</span>
+              <div className="w-full from-2 from-40%  bg-gradient-to-r to-transparent flex px-5 h-12 justify-between gap-2 items-center">
+                <span className="flex gap-2 items-center">
+                  <Button variant="icon-green" size="icon-sm">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      height="16"
+                      width="16"
+                      className="fill-1"
+                    >
+                      <path d="M494.26 276.22c-3.6-40.41-9.53-48.28-11.77-51.24-5.15-6.84-13.39-11.31-22.11-16a3.6 3.6 0 0 1-.91-5.68 15.93 15.93 0 0 0 4.53-12.53A16.27 16.27 0 0 0 447.65 176h-15.6a17 17 0 0 0-2 .13 8.5 8.5 0 0 0-1.41-.47c-9.24-19.53-21.89-46.27-48.11-59.32C341.64 97 270 96 256 96s-85.64 1-124.48 20.31c-26.22 13.05-38.87 39.79-48.11 59.32l-.08.16a6.52 6.52 0 0 0-1.35.34 17 17 0 0 0-2-.13H64.35A16.27 16.27 0 0 0 48 190.77a15.93 15.93 0 0 0 4.59 12.47 3.6 3.6 0 0 1-.91 5.68c-8.72 4.72-17 9.19-22.11 16-2.24 3-8.16 10.83-11.77 51.24-2 22.74-2.3 46.28-.73 61.44 3.29 31.5 9.46 50.54 9.72 51.33a16 16 0 0 0 13.2 10.87v.2a16 16 0 0 0 16 16h56a16 16 0 0 0 16-16c8.61 0 14.6-1.54 20.95-3.18a158.83 158.83 0 0 1 28-4.91C207.45 389 237.79 388 256 388c17.84 0 49.52 1 80.08 3.91a159.16 159.16 0 0 1 28.11 4.93c6.08 1.56 11.85 3 19.84 3.15a16 16 0 0 0 16 16h56a16 16 0 0 0 16-16v-.12A16 16 0 0 0 485.27 389c.26-.79 6.43-19.83 9.72-51.33 1.57-15.17 1.29-38.67-.73-61.45zm-381.93-86.91c8-17 17.15-36.24 33.44-44.35 23.54-11.72 72.33-17 110.23-17s86.69 5.24 110.23 17c16.29 8.11 25.4 27.36 33.44 44.35l1 2.17a8 8 0 0 1-7.44 11.42C360 202 290 199.12 256 199.12s-104 2.95-137.28 3.85a8 8 0 0 1-7.44-11.42c.35-.74.72-1.49 1.05-2.24zm11.93 79.63A427.17 427.17 0 0 1 72.42 272c-10.6 0-21.53-3-23.56-12.44-1.39-6.35-1.24-9.92-.49-13.51C49 243 50 240.78 55 240c13-2 20.27.51 41.55 6.78 14.11 4.15 24.29 9.68 30.09 14.06 2.91 2.16 1.36 7.8-2.38 8.1zm221.38 82c-13.16 1.5-39.48.95-89.34.95s-76.17.55-89.33-.95c-13.58-1.51-30.89-14.35-19.07-25.79 7.87-7.54 26.23-13.18 50.68-16.35s34.8-4.8 57.62-4.8 32.12 1 57.62 4.81 44.77 9.52 50.68 16.35c10.78 12.24-5.29 24.19-18.86 25.84zm117.5-91.39c-2 9.48-13 12.44-23.56 12.44a455.91 455.91 0 0 1-52.84-3.06c-3.06-.29-4.48-5.66-1.38-8.1 5.71-4.49 16-9.91 30.09-14.06 21.28-6.27 33.55-8.78 44.09-6.69 2.57.51 3.93 3.27 4.09 5a40.64 40.64 0 0 1-.49 14.48z"></path>
+                    </svg>
+                  </Button>
+                  <span className="font-kulim font-bold">Vehicles</span>
+                </span>
               </div>
               <div className="grid grid-cols-4 gap-4 items-center justify-center">
-                {Profile.vehicles.map((vehicle, idx) => (
+                {profile.vehicles.map((vehicle, idx) => (
                   <Label
                     theme={`${vehicle.bolo ? 'red' : 'green'}`}
                     key={idx}
@@ -231,22 +307,53 @@ export default function DisplayProfile({ params }: { params: { id: string } }) {
             </div>
             {/* Job */}
             <div className="flex flex-col gap-5">
-              <div className="w-full bg-2 to-transparent flex px-5 h-12 items-center justify-between">
-                <span className="font-kulim font-bold">Job</span>
+              <div className="w-full from-2 from-40%  bg-gradient-to-r to-transparent flex px-5 h-12 justify-between gap-2 items-center">
+                <span className="flex gap-2 items-center">
+                  <Button variant="icon-green" size="icon-sm">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 448 512"
+                      height="16"
+                      width="16"
+                      className="fill-1"
+                    >
+                      <path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm95.8 32.6L272 480l-32-136 32-56h-96l32 56-32 136-47.8-191.4C56.9 292 0 350.3 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-72.1-56.9-130.4-128.2-133.8z"></path>
+                    </svg>
+                  </Button>
+                  <span className="font-kulim font-bold">Job</span>
+                </span>
               </div>
               <div className="grid grid-cols-1 gap-4 items-center justify-center">
                 <Label theme="green" className=" capitalize">
-                  {Profile.job}
+                  {profile.job}
                 </Label>
               </div>
             </div>
             {/* Apartment */}
             <div className="flex flex-col gap-5">
-              <div className="w-full bg-2 to-transparent flex px-5 h-12 items-center justify-between">
-                <span className="font-kulim font-bold">Apartment</span>
+              <div className="w-full from-2 from-40%  bg-gradient-to-r to-transparent flex px-5 h-12 justify-between gap-2 items-center">
+                <span className="flex gap-2 items-center">
+                  <Button variant="icon-green" size="icon-sm">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      height="16"
+                      width="16"
+                      className="fill-1"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path d="M17 11V3H7v4H3v14h8v-4h2v4h8V11h-4zM7 19H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V9h2v2zm4 4H9v-2h2v2zm0-4H9V9h2v2zm0-4H9V5h2v2zm4 8h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm4 12h-2v-2h2v2zm0-4h-2v-2h2v2z"></path>
+                    </svg>
+                  </Button>
+                  <span className="font-kulim font-bold">Apartment</span>
+                </span>
               </div>
               <div className="grid grid-cols-1 gap-4 items-center justify-center ">
-                {Profile.apartment.map((apart, idx) => (
+                {profile.apartment.map((apart, idx) => (
                   <Label
                     theme="green"
                     className=" capitalize"
@@ -256,47 +363,56 @@ export default function DisplayProfile({ params }: { params: { id: string } }) {
               </div>
             </div>
             {/* Criminal History */}
-            <div className="w-full bg-2 to-transparent flex px-5 h-12 justify-between items-center">
-              <span className="font-kulim font-bold">Criminal History</span>
-              <ComboboxDemo
-                placeholder="Search Criminal Fines..."
-                list={ListCriminalHistory}
-              >
-                {' '}
-              </ComboboxDemo>
-            </div>
-            {/* Licenses */}
-            <div className="w-full bg-2 to-transparent flex px-5 h-12 justify-between items-center">
-              <span className="font-kulim font-bold">Licenses</span>
-              <ComboboxDemo
-                placeholder="Search Criminal Fines..."
-                list={ListCriminalHistory}
-              >
+            <div className="w-full from-2 from-40%  bg-gradient-to-r to-transparent flex px-5 h-12 justify-between gap-2 items-center">
+              <span className="flex gap-2 items-center">
                 <Button variant="icon-green" size="icon-sm">
                   <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    height="16"
+                    width="16"
+                    className="fill-1"
                   >
-                    <path
-                      d="M1 6H11"
-                      stroke="#3CE7D2"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M6 1V11"
-                      stroke="#3CE7D2"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
+                    <path d="M12 2C16.9706 2 21 6.02944 21 11C21 13.2031 20.2084 15.2213 18.8941 16.7858C20.1491 17.6156 20.9275 18.6754 20.9952 19.835L21 20L12 22L3 20L3.00481 19.835C3.0725 18.6755 3.85076 17.6158 5.10554 16.7859C3.79194 15.2222 3 13.2036 3 11C3 6.02944 7.02944 2 12 2ZM12 13C10.6193 13 9.5 13.6716 9.5 14.5C9.5 15.3284 10.6193 16 12 16C13.3807 16 14.5 15.3284 14.5 14.5C14.5 13.6716 13.3807 13 12 13ZM9 8C7.89543 8 7 8.67157 7 9.5C7 10.3284 7.89543 11 9 11C10.1046 11 11 10.3284 11 9.5C11 8.67157 10.1046 8 9 8ZM15 8C13.8954 8 13 8.67157 13 9.5C13 10.3284 13.8954 11 15 11C16.1046 11 17 10.3284 17 9.5C17 8.67157 16.1046 8 15 8Z"></path>
                   </svg>
                 </Button>
-              </ComboboxDemo>
+                <span className="font-kulim font-bold">Criminal History</span>
+              </span>
+            </div>
+            {/* Licenses */}
+            <div className="w-full from-2 from-40%  bg-gradient-to-r to-transparent flex px-5 h-12 justify-between gap-2 items-center">
+              <span className="flex gap-2 items-center">
+                <Button variant="icon-green" size="icon-sm">
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    height="16"
+                    width="16"
+                    className="stroke-1"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M15 21h-9a3 3 0 0 1 -3 -3v-1h10v2a2 2 0 0 0 4 0v-14a2 2 0 1 1 2 2h-2m2 -4h-11a3 3 0 0 0 -3 3v11"></path>
+                    <path d="M9 7l4 0"></path>
+                    <path d="M9 11l4 0"></path>
+                  </svg>
+                </Button>
+                <span className="font-kulim font-bold">Licenses</span>
+              </span>
+            </div>
+            <div className="grid grid-cols-3 gap-4">
+              {ListLicenses.map((licenses, idx) => (
+                <SelectLicenses key={idx}>
+                  <Label theme={licenses.state ? 'green' : 'red'}>
+                    {licenses.name}
+                  </Label>
+                </SelectLicenses>
+              ))}
             </div>
           </div>
         </div>

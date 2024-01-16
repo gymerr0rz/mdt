@@ -13,7 +13,9 @@ export default function Profiles() {
             <h1 className="text-6xl font-bold tracking-tighter">
               Los Santos Police
             </h1>
-            <h1 className=" tracking-widest uppercase">Profiles Database</h1>
+            <h1 className=" tracking-widest uppercase font-[600] text-1">
+              Profile Database
+            </h1>
           </span>
           <SearchBar />
         </div>

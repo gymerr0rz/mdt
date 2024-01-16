@@ -12,10 +12,6 @@ export default function SearchBar() {
 
   React.useEffect(() => {
     const FilterResults = () => {
-      if (window.location.pathname === '/profiles') setValue(' ');
-
-      console.log(window.location.pathname);
-
       const value = inputValue;
       setValue(value);
       const filteredData = data.filter((person) =>
