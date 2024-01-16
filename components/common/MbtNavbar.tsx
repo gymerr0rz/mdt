@@ -135,7 +135,7 @@ export default function MbtNavbar() {
             <Link
               href="/citations"
               className={`flex gap-3 font-kulim font-bold w-52 py-2  rounded-xl transition-colors ${
-                path === '/citations'
+                path === '/citations' || path?.includes('/citations')
                   ? 'text-1 hover:text-3 bg-2'
                   : 'hover:text-1 text-3 hover:bg-2'
               } group justify-start px-5 items-center h-14`}
@@ -147,7 +147,7 @@ export default function MbtNavbar() {
                 height="24"
                 width="24"
                 className={` transition-colors ${
-                  path === '/citations'
+                  path === '/citations' || path?.includes('/citations')
                     ? 'group-hover:fill-3 fill-1'
                     : 'fill-3 group-hover:fill-1'
                 }`}

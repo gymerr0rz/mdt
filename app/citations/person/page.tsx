@@ -1,45 +1,21 @@
 import MbtNavbar from '@/components/common/MbtNavbar';
-
 import { Button } from '@/components/common/Button';
 import Label from '@/components/common/Label';
-import { RecentCalls } from '@/components/common/RecentCalls';
+import { IncidentsAccordion } from '@/components/common/IncidentsAccordion';
+import InputImage from '@/components/common/InputImage';
+import SuspectInvolved from '@/components/common/SuspectInvolved';
+import SearchIncidents from '@/components/common/SearchIncidents';
 import Ping from '@/components/common/Ping';
+import BackButton from '@/components/common/BackButton';
 
-export default function Dispatch() {
+export default function Person() {
   return (
     <main className="flex">
       <MbtNavbar />
       <div className="flex w-full px-5 py-10 gap-5">
-        <div className=" w-3/5 flex flex-col gap-5">
-          <div className="w-full from-2 from-40%  bg-gradient-to-r to-transparent flex px-5 h-12 justify-start gap-2 items-center">
-            <Button variant="icon-green" size="icon-sm">
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 18 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g filter="url(#filter0_d_9_567)">
-                  <path
-                    d="M12.5147 15.1247C11.9428 15.1247 11.1395 14.9179 9.93658 14.2458C8.47378 13.4255 7.34234 12.6682 5.88745 11.2171C4.48472 9.81526 3.8021 8.90764 2.84673 7.16916C1.76744 5.20627 1.95142 4.17736 2.15708 3.73762C2.40201 3.21203 2.76353 2.89768 3.23081 2.58567C3.49623 2.41177 3.7771 2.2627 4.06988 2.14035C4.09917 2.12776 4.12642 2.11574 4.15074 2.1049C4.29576 2.03957 4.51548 1.94084 4.7938 2.04631C4.97954 2.11604 5.14537 2.25871 5.40494 2.51506C5.93726 3.04006 6.6647 4.2093 6.93306 4.78352C7.11324 5.17053 7.23247 5.426 7.23277 5.71252C7.23277 6.04797 7.06402 6.30666 6.85923 6.58586C6.82085 6.6383 6.78277 6.6884 6.74585 6.73703C6.5229 7.03 6.47398 7.11467 6.5062 7.26584C6.57154 7.56965 7.05874 8.47404 7.85943 9.27297C8.66011 10.0719 9.53843 10.5283 9.84341 10.5934C10.001 10.6271 10.0875 10.5761 10.3898 10.3452C10.4332 10.3121 10.4777 10.2779 10.5243 10.2436C10.8366 10.0113 11.0833 9.8469 11.4108 9.8469H11.4126C11.6976 9.8469 11.9417 9.97053 12.346 10.1744C12.8733 10.4405 14.0777 11.1585 14.6059 11.6914C14.8628 11.9504 15.0061 12.1156 15.0761 12.3011C15.1816 12.5803 15.0823 12.7991 15.0175 12.9456C15.0067 12.9699 14.9947 12.9966 14.9821 13.0262C14.8588 13.3184 14.7088 13.5987 14.5341 13.8635C14.2227 14.3293 13.9072 14.69 13.3804 14.9352C13.1099 15.0631 12.8139 15.1279 12.5147 15.1247Z"
-                    fill="#3CE7D2"
-                  />
-                  <path
-                    d="M12.5147 15.1247C11.9428 15.1247 11.1395 14.9179 9.93658 14.2458C8.47378 13.4255 7.34234 12.6682 5.88745 11.2171C4.48472 9.81526 3.8021 8.90764 2.84673 7.16916C1.76744 5.20627 1.95142 4.17736 2.15708 3.73762C2.40201 3.21203 2.76353 2.89768 3.23081 2.58567C3.49623 2.41177 3.7771 2.2627 4.06988 2.14035C4.09917 2.12776 4.12642 2.11574 4.15074 2.1049C4.29576 2.03957 4.51548 1.94084 4.7938 2.04631C4.97954 2.11604 5.14537 2.25871 5.40494 2.51506C5.93726 3.04006 6.6647 4.2093 6.93306 4.78352C7.11324 5.17053 7.23247 5.426 7.23277 5.71252C7.23277 6.04797 7.06402 6.30666 6.85923 6.58586C6.82085 6.6383 6.78277 6.6884 6.74585 6.73703C6.5229 7.03 6.47398 7.11467 6.5062 7.26584C6.57154 7.56965 7.05874 8.47404 7.85943 9.27297C8.66011 10.0719 9.53843 10.5283 9.84341 10.5934C10.001 10.6271 10.0875 10.5761 10.3898 10.3452C10.4332 10.3121 10.4777 10.2779 10.5243 10.2436C10.8366 10.0113 11.0833 9.8469 11.4108 9.8469H11.4126C11.6976 9.8469 11.9417 9.97053 12.346 10.1744C12.8733 10.4405 14.0777 11.1585 14.6059 11.6914C14.8628 11.9504 15.0061 12.1156 15.0761 12.3011C15.1816 12.5803 15.0823 12.7991 15.0175 12.9456C15.0067 12.9699 14.9947 12.9966 14.9821 13.0262C14.8588 13.3184 14.7088 13.5987 14.5341 13.8635C14.2227 14.3293 13.9072 14.69 13.3804 14.9352C13.1099 15.0631 12.8139 15.1279 12.5147 15.1247Z"
-                    stroke="#3CE7D2"
-                  />
-                </g>
-              </svg>
-            </Button>
-            <span className="font-kulim font-bold">Recent Calls</span>
-            <Ping className="bg-1" />
-          </div>
-          <RecentCalls />
-        </div>
-
-        <div className=" w-1/3 flex flex-col gap-5">
-          <div className="w-full from-2 from-40%  bg-gradient-to-r to-transparent flex px-5 h-12 justify-start gap-2 items-center">
+        <div className=" w-full flex gap-5 h-12 items-center">
+          <BackButton href="/citations" />
+          <div className="w-full from-2 from-40%  bg-gradient-to-r to-transparent flex px-5  justify-start gap-2 items-center">
             <Button variant="icon-green" size="icon-sm">
               <svg
                 width="16"
@@ -58,14 +34,7 @@ export default function Dispatch() {
                 </g>
               </svg>
             </Button>
-            <span className="font-kulim font-bold">Active Employees</span>
-          </div>
-          <div className="grid grid-cols-3 gap-4 items-center justify-center">
-            <Label theme="green">[304] M. FLEXTOWN</Label>
-            <Label theme="green">[304] M. FLEXTOWN</Label>
-            <Label theme="green">[304] M. FLEXTOWN</Label>
-            <Label theme="green">[304] M. FLEXTOWN</Label>
-            <Label theme="green">[304] M. FLEXTOWN</Label>
+            <span className="font-kulim font-bold">Person Citation</span>
           </div>
         </div>
       </div>

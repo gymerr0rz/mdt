@@ -23,6 +23,7 @@ const buttonVariants = cva(
         'icon-xs': 'max-h-6 max-w-6 min-w-6 min-h-6 rounded-[2.5px]',
         'icon-sm': 'max-h-8 max-w-8 min-w-8 min-h-8 rounded-[5px]',
         'icon-lg': 'max-h-12 max-w-12 min-w-12 min-h-12 rounded-[10px]',
+        'icon-xl': 'max-h-20 max-w-20 min-w-20 min-h-20 rounded-[10px]',
         custom: '',
       },
     },

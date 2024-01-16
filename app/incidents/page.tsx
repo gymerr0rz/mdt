@@ -5,6 +5,7 @@ import { IncidentsAccordion } from '@/components/common/IncidentsAccordion';
 import InputImage from '@/components/common/InputImage';
 import SuspectInvolved from '@/components/common/SuspectInvolved';
 import SearchIncidents from '@/components/common/SearchIncidents';
+import Ping from '@/components/common/Ping';
 
 export default function Incidents() {
   return (
@@ -53,6 +54,7 @@ export default function Incidents() {
               </svg>
             </Button>
             <span className="font-kulim font-bold">Incidents</span>
+            <Ping className="bg-7" />
             <SearchIncidents />
           </div>
           <IncidentsAccordion />
