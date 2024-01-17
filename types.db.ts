@@ -1,4 +1,4 @@
-export interface Vehicle {
+export interface OwnedVehicles {
   vehicle_model: string;
   bolo: boolean;
 }
@@ -38,7 +38,7 @@ export interface Person {
   summary: string;
   job: string;
   tags: Tag[];
-  vehicles: Vehicle[];
+  vehicles: OwnedVehicles[];
   apartment: Apartment;
   criminal_history: CriminalHistory[];
   licences: License[];
@@ -50,4 +50,17 @@ export interface Incident {
   incident_id: number;
   incident_summary: string;
   evidence: { image_url: string };
+}
+
+export interface Vehicle {
+  vehicle_plate: string;
+  vehicle_owner: {
+    owner_name: string;
+    owner_warrant: boolean;
+  };
+  vehicle_image_url: string;
+  vehicle_bolo: boolean;
+  vehicle_points: number;
+  vehicle_class: string;
+  vehicle_model: string;
 }

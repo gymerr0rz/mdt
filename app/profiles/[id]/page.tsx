@@ -1,7 +1,7 @@
 'use client';
 
 import MbtNavbar from '@/components/common/MbtNavbar';
-import SearchBar from '@/components/common/SearchBar';
+import SearchBar from '@/components/common/SearchBarPeople';
 import Profiles from '@/dummy-data/profiles.json';
 import { Button } from '@/components/common/Button';
 import Input from '@/components/common/Input';

@@ -11,19 +11,8 @@
     "tags": [],
     "vehicles": [
       {
-        "vehicle_model": "Karuma",
-        "bolo": true
-      },
-      {
-        "vehicle_model": "Salten",
-        "bolo": false
-      },
-      {
-        "vehicle_model": "Fudgio",
-        "bolo": false
-      },
-      {
-        "vehicle_model": "Charger",
+        "vehicle_model": "Dinka Blista",
+        "vehicle_plate": "5242-9399",
         "bolo": true
       }
     ],
@@ -50,19 +39,8 @@
     "tags": [],
     "vehicles": [
       {
-        "vehicle_model": "Karuma",
-        "bolo": true
-      },
-      {
-        "vehicle_model": "Salten",
-        "bolo": false
-      },
-      {
-        "vehicle_model": "Fudgio",
-        "bolo": false
-      },
-      {
-        "vehicle_model": "Charger",
+        "vehicle_model": "R8",
+        "vehicle_plate": "4241-4444",
         "bolo": true
       }
     ],
@@ -89,19 +67,8 @@
     "tags": [],
     "vehicles": [
       {
-        "vehicle_model": "Karuma",
-        "bolo": true
-      },
-      {
-        "vehicle_model": "Salten",
-        "bolo": false
-      },
-      {
-        "vehicle_model": "Fudgio",
-        "bolo": false
-      },
-      {
-        "vehicle_model": "Charger",
+        "vehicle_model": "GT86",
+        "vehicle_plate": "1234-5678",
         "bolo": true
       }
     ],
@@ -128,19 +95,8 @@
     "tags": [],
     "vehicles": [
       {
-        "vehicle_model": "Karuma",
-        "bolo": true
-      },
-      {
-        "vehicle_model": "Salten",
-        "bolo": false
-      },
-      {
-        "vehicle_model": "Fudgio",
-        "bolo": false
-      },
-      {
-        "vehicle_model": "Charger",
+        "vehicle_model": "Aventador",
+        "vehicle_plate": "9999-9999",
         "bolo": true
       }
     ],
@@ -167,19 +123,8 @@
     "tags": [],
     "vehicles": [
       {
-        "vehicle_model": "Karuma",
-        "bolo": true
-      },
-      {
-        "vehicle_model": "Salten",
-        "bolo": false
-      },
-      {
-        "vehicle_model": "Fudgio",
-        "bolo": false
-      },
-      {
-        "vehicle_model": "Charger",
+        "vehicle_model": "Huracan",
+        "vehicle_plate": "9599-9399",
         "bolo": true
       }
     ],

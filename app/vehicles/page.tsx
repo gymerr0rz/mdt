@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import MbtNavbar from '@/components/common/MbtNavbar';
-import SearchBarPeople from '@/components/common/SearchBarPeople';
+import SearchBarVehicle from '@/components/common/SearchBarVehicles';
 import Police from '@/assets/los-santos-police.png';
-export default function Profiles() {
+
+export default function Vehicles() {
   return (
     <>
       <main className="flex">
@@ -14,10 +15,10 @@ export default function Profiles() {
               Los Santos Police
             </h1>
             <h1 className=" tracking-widest uppercase font-[600] text-1">
-              Profile Database
+              Vehicle Database
             </h1>
           </span>
-          <SearchBarPeople />
+          <SearchBarVehicle />
         </div>
       </main>
     </>

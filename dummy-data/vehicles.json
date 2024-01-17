@@ -1,0 +1,47 @@
+[
+  {
+    "vehicle_plate": "5242-9399",
+    "vehicle_owner": { "owner_name": "Jeremy Lin", "owner_warrant": true },
+    "vehicle_image_url": "https://i.imgur.com/nNmmMp",
+    "vehicle_bolo": true,
+    "vehicle_points": 0,
+    "vehicle_class": "Sedan",
+    "vehicle_model": "Dinka Blista"
+  },
+  {
+    "vehicle_plate": "4241-4444",
+    "vehicle_owner": { "owner_name": "Johhny Laroy", "owner_warrant": false },
+    "vehicle_image_url": "https://i.imgur.com/nNmmMp",
+    "vehicle_bolo": true,
+    "vehicle_points": 0,
+    "vehicle_class": "Sedan",
+    "vehicle_model": "R8"
+  },
+  {
+    "vehicle_plate": "1234-5678",
+    "vehicle_owner": { "owner_name": "Lucas Fork", "owner_warrant": true },
+    "vehicle_image_url": "https://i.imgur.com/nNmmMp",
+    "vehicle_bolo": true,
+    "vehicle_points": 0,
+    "vehicle_class": "Sedan",
+    "vehicle_model": "GT86"
+  },
+  {
+    "vehicle_plate": "9999-9999",
+    "vehicle_owner": { "owner_name": "Nicholas Maluk", "owner_warrant": true },
+    "vehicle_image_url": "https://i.imgur.com/nNmmMp",
+    "vehicle_bolo": true,
+    "vehicle_points": 0,
+    "vehicle_class": "Sedan",
+    "vehicle_model": "Dinka Blista"
+  },
+  {
+    "vehicle_plate": "9599-9399",
+    "vehicle_owner": { "owner_name": "Huracan", "owner_warrant": true },
+    "vehicle_image_url": "https://i.imgur.com/nNmmMp",
+    "vehicle_bolo": true,
+    "vehicle_points": 0,
+    "vehicle_class": "Sedan",
+    "vehicle_model": "C430"
+  }
+]
