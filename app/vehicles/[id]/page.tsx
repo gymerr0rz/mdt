@@ -1,17 +1,12 @@
 'use client';
 
 import MbtNavbar from '@/components/common/MbtNavbar';
-import SearchBar from '@/components/common/SearchBarPeople';
-import Vehicles from '@/dummy-data/Vehicles.json';
+import Vehicles from '@/dummy-data/vehicles.json';
 import { Button } from '@/components/common/Button';
-import Input from '@/components/common/Input';
-import Label from '@/components/common/Label';
-import ListLicenses from '@/dummy-data/licenses.json';
-import ListCriminalHistory from '@/dummy-data/criminal-history.json';
-import { TagsAdd } from '@/components/common/TagAdd';
-import { SelectLicenses } from '@/components/common/SelectLicenses';
+import Input from '@/components/common/InputProfile';
 import React from 'react';
 import { Vehicle } from '@/types.db';
+import SearchBarVehicle from '@/components/common/SearchBarVehicles';
 
 export default function DisplayVehicle({ params }: { params: { id: string } }) {
   const [vehicle, setVehicle] = React.useState<Vehicle | undefined>();
@@ -33,7 +28,7 @@ export default function DisplayVehicle({ params }: { params: { id: string } }) {
       <main className="flex">
         <MbtNavbar />
         <div className="flex flex-col w-full px-5 py-10">
-          <SearchBar />
+          <SearchBarVehicle />
           <div className="w-full h-full flex justify-center items-center">
             <svg
               stroke="currentColor"
@@ -60,14 +55,13 @@ export default function DisplayVehicle({ params }: { params: { id: string } }) {
     <main className="flex">
       <MbtNavbar />
       <div className="flex flex-col w-full px-5 py-10">
-        <SearchBar />
+        <SearchBarVehicle />
         <div className="w-full flex gap-5 animate-opacity-down">
           <div className=" w-2/3 flex flex-col gap-5">
             <div className="from-2 from-40%  bg-gradient-to-r to-transparent w-full px-5 py-2 flex justify-between ">
               <h1 className="flex items-center gap-1 font-kulim">
                 {vehicle.vehicle_model}
                 <b className="text-xs text-1 font-light">
-                  {' '}
                   ({vehicle.vehicle_plate})
                 </b>
               </h1>

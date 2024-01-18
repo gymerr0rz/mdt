@@ -4,7 +4,7 @@ import MbtNavbar from '@/components/common/MbtNavbar';
 import SearchBar from '@/components/common/SearchBarPeople';
 import Profiles from '@/dummy-data/profiles.json';
 import { Button } from '@/components/common/Button';
-import Input from '@/components/common/Input';
+import Input from '@/components/common/InputProfile';
 import Label from '@/components/common/Label';
 import ListLicenses from '@/dummy-data/licenses.json';
 import ListCriminalHistory from '@/dummy-data/criminal-history.json';

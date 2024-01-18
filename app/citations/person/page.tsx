@@ -1,7 +1,7 @@
 import MbtNavbar from '@/components/common/MbtNavbar';
 import { Button } from '@/components/common/Button';
 import BackButton from '@/components/common/BackButton';
-import Input from '../../../components/common/Input';
+import Input from '../../../components/common/InputProfile';
 import { ComboboxDemo } from '../../../components/common/Select';
 import ListCriminalHistory from '@/dummy-data/criminal-history.json';
 import LabelButton from '../../../components/common/LabelButton';

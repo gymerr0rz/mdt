@@ -6,6 +6,18 @@ import InputImage from '@/components/common/InputImage';
 import SuspectInvolved from '@/components/common/SuspectInvolved';
 import SearchIncidents from '@/components/common/SearchIncidents';
 import Ping from '@/components/common/Ping';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/ui/alert-dialog';
+import Input from '../../components/common/Input';
 
 export default function Incidents() {
   return (
@@ -56,6 +68,49 @@ export default function Incidents() {
             <span className="font-kulim font-bold">Incidents</span>
             <Ping className="bg-7" />
             <SearchIncidents />
+            <AlertDialog>
+              <AlertDialogTrigger>
+                <Button variant="icon-green" size="icon-sm" div>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 6H11"
+                      stroke="#3CE7D2"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6 1V11"
+                      stroke="#3CE7D2"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </Button>
+              </AlertDialogTrigger>
+              <AlertDialogContent>
+                <AlertDialogHeader>
+                  <AlertDialogTitle>Create a new Incident?</AlertDialogTitle>
+                  <Input
+                    required
+                    id=""
+                    name="Incident Name"
+                    placeholder="Connor Dark - Assault of a LEO - 1/3/2024"
+                  />
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                  <AlertDialogCancel>Cancel</AlertDialogCancel>
+                  <AlertDialogAction type="submit">Create</AlertDialogAction>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
           </div>
           <IncidentsAccordion />
         </div>

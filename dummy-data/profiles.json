@@ -3,7 +3,7 @@
     "id": "#DXD97145",
     "name": "Jeremy Lin",
     "profile_url": "https://i.imgur.com/nNmmMp",
-    "warrant": true,
+    "warrant": false,
     "phone_number": "0123-456-789",
     "fingerprint": "ANSIDO2190N90DN20912",
     "dna": "MVIOON9DF8908213E09NO",
@@ -13,7 +13,7 @@
       {
         "vehicle_model": "Dinka Blista",
         "vehicle_plate": "5242-9399",
-        "bolo": true
+        "bolo": false
       }
     ],
     "job": "Los Santos Police",

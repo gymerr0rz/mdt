@@ -9,11 +9,9 @@ interface InputProps extends HTMLAttributes<HTMLInputElement> {
   value?: string;
   disabled?: boolean;
   editMode?: boolean;
-  required?: boolean;
 }
 
-export default function Input({
-  required,
+export default function InputProfile({
   name,
   placeholder,
   id,
@@ -24,14 +22,21 @@ export default function Input({
 }: InputProps) {
   return (
     <div className="w-full flex flex-col gap-2 bg-2 py-2 px-5 rounded-xl">
+      <label
+        htmlFor={id}
+        className={`transition-colors text-xs uppercase tracking-[0.2em] font-kulim ${
+          editMode && 'text-1'
+        }`}
+      >
+        {name}
+      </label>
       <input
-        required={required}
         disabled={disabled}
         type="text"
         name={id}
         id={id}
         placeholder={placeholder}
-        className="bg-transparent outline-none font-kulim text-md"
+        className="bg-transparent outline-none font-kulim  text-lg"
         value={value}
         {...rest}
       />

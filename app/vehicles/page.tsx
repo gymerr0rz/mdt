@@ -3,7 +3,7 @@ import MbtNavbar from '@/components/common/MbtNavbar';
 import SearchBarVehicle from '@/components/common/SearchBarVehicles';
 import Police from '@/assets/los-santos-police.png';
 
-export default function Vehicles() {
+export default function VehiclesSearch() {
   return (
     <>
       <main className="flex">
