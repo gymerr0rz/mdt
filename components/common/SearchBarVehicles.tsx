@@ -52,7 +52,7 @@ export default function SearchBarVehicle() {
 
           <input
             type="text"
-            placeholder="Search Vehicles..."
+            placeholder="Search Vehicles by Plate..."
             className="bg-transparent outline-none font-kulim  w-full"
             onChange={(e) => setValue(e.target.value)}
             value={inputValue}
