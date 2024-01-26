@@ -5,6 +5,7 @@ import Input from '../../../components/common/InputProfile';
 import { ComboboxDemo } from '../../../components/common/Select';
 import ListCriminalHistory from '@/dummy-data/criminal-history.json';
 import LabelButton from '../../../components/common/LabelButton';
+import { Charges } from '../../../types.db';
 
 export default function Vehicle() {
   return (
@@ -120,7 +121,7 @@ export default function Vehicle() {
             </span>
             <ComboboxDemo
               placeholder="Search Criminal Fines..."
-              list={ListCriminalHistory}
+              list={ListCriminalHistory as Charges[]}
             >
               <Button variant="icon-green" size="icon-sm">
                 <svg
