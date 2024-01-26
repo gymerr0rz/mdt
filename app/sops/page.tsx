@@ -3,8 +3,27 @@
 import MbtNavbar from '@/components/common/MbtNavbar';
 import { Button } from '@/components/common/Button';
 import Ping from '@/components/common/Ping';
+import React from 'react';
+import Loader from '@/components/common/Loader';
 
 export default function Sops() {
+  const [loaded, setLoaded] = React.useState<boolean>(false);
+
+  React.useEffect(() => {
+    const frame = document.getElementById(
+      'iframe-load'
+    ) as HTMLIFrameElement | null;
+    console.log(frame);
+
+    if (frame) {
+      frame.onload = () => setLoaded(true);
+
+      return () => {
+        frame.onload = null;
+      };
+    }
+  }, []);
+
   return (
     <main className="flex">
       <MbtNavbar />
@@ -55,7 +74,18 @@ export default function Sops() {
             src="https://docs.google.com/document/d/1G3-oSPLTcdvihVP7yGz28xMpjvo7j_O_dlEDHjnwTmE/edit?usp=sharing"
             height={'100%'}
             style={{ border: 'none' }}
+            id="iframe-load"
+            onLoad={() => setLoaded(true)}
+            className={`${!loaded && 'hidden'}`}
           />
+
+          <div
+            className={`w-full h-full flex justify-center items-center ${
+              loaded && 'hidden'
+            }`}
+          >
+            <Loader className="fill-7" />
+          </div>
         </div>
       </div>
     </main>
