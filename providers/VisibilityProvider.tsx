@@ -8,9 +8,13 @@ interface VisibilityProviderValue {
   visible: boolean;
 }
 
+interface VisibilityProps {
+  children: React.ReactNode;
+}
+
 // This should be mounted at the top level of your application, it is currently set to
 // apply a CSS visibility value. If this is non-performant, this should be customized.
-export const VisibilityProvider: React.FC = ({ children }) => {
+export const VisibilityProvider: React.FC<VisibilityProps> = ({ children }) => {
   const [visible, setVisible] = useState(false);
 
   useNuiEvent<boolean>('setVisible', setVisible);
