@@ -102,7 +102,6 @@ export default function Incidents() {
                   <Input
                     required
                     id=""
-                    name="Incident Name"
                     placeholder="Connor Dark - Assault of a LEO - 1/3/2024"
                   />
                 </AlertDialogHeader>

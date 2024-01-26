@@ -16,13 +16,6 @@ import { Button } from './Button';
 interface Combobox {
   children: React.ReactNode;
   placeholder: string;
-  list: List[];
-}
-
-interface List {
-  value: string;
-  label: string;
-  fine?: number;
 }
 
 const CommandInput = React.forwardRef<
@@ -33,7 +26,7 @@ const CommandInput = React.forwardRef<
     <CommandPrimitive.Input
       ref={ref}
       className={cn(
-        'flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50  ',
+        'flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 font-kulim',
         className
       )}
       {...props}
@@ -57,7 +50,7 @@ const CommandInput = React.forwardRef<
 
 CommandInput.displayName = 'input';
 
-export function TagsAdd({ children, placeholder, list }: Combobox) {
+export function TagsAdd({ children, placeholder }: Combobox) {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState('');
 

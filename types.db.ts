@@ -1,5 +1,6 @@
 export interface OwnedVehicles {
   vehicle_model: string;
+  vehicle_plate: string;
   bolo: boolean;
 }
 
@@ -39,7 +40,7 @@ export interface Person {
   job: string;
   tags: Tag[];
   vehicles: OwnedVehicles[];
-  apartment: Apartment;
+  apartment: Apartment[];
   criminal_history: CriminalHistory[];
   licences: License[];
   weapons: Weapon[];
@@ -72,4 +73,10 @@ export interface Charges {
   time: number;
   fine: number;
   description: string;
+}
+
+export interface SelectProps {
+  value: string;
+  label: string;
+  fine?: number;
 }

@@ -17,18 +17,12 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover';
-import { Charges } from '@/types.db';
+import { Charges, SelectProps } from '@/types.db';
 
 interface Combobox {
   children: React.ReactNode;
   placeholder: string;
-  list: (Default | Charges)[];
-}
-
-interface Default {
-  value: string;
-  label: string;
-  fine?: number;
+  list: (SelectProps | Charges)[];
 }
 
 export function ComboboxDemo({ children, placeholder, list }: Combobox) {
@@ -51,7 +45,8 @@ export function ComboboxDemo({ children, placeholder, list }: Combobox) {
               <CommandItem
                 key={idx}
                 value={
-                  (framework as Default)?.value || (framework as Charges)?.title
+                  (framework as SelectProps)?.value ||
+                  (framework as Charges)?.title
                 }
                 onSelect={(currentValue) => {
                   setValue(currentValue === value ? '' : currentValue);
@@ -63,7 +58,7 @@ export function ComboboxDemo({ children, placeholder, list }: Combobox) {
                 }
               >
                 <span className="font-[600]">
-                  {(framework as Default)?.label ||
+                  {(framework as SelectProps)?.label ||
                     (framework as Charges)?.title}
                 </span>
 
