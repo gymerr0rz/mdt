@@ -38,7 +38,7 @@ export default function Input({
         name={id}
         id={id}
         placeholder={placeholder}
-        className="bg-transparent outline-none font-kulim text-md"
+        className="bg-transparent outline-none   text-md"
         value={value}
         {...rest}
       />

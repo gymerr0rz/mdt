@@ -33,7 +33,7 @@ export default function Citations() {
                 </g>
               </svg>
             </Button>
-            <span className="font-kulim font-bold">Issue a Citation</span>
+            <span className="  font-bold">Issue a Citation</span>
           </div>
 
           <div className="w-full h-full flex justify-center items-center gap-12">

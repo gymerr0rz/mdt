@@ -8,7 +8,7 @@ export default function NotFound() {
       <MbtNavbar />
       <div className="w-full h-full flex justify-center items-center flex-col gap-2">
         <Image src={Horizon} alt="horizon-logo" />
-        <h1 className="uppercase font-kulim tracking-[0.5em] font-bold">
+        <h1 className="uppercase   tracking-[0.5em] font-bold">
           Page not found.
         </h1>
       </div>

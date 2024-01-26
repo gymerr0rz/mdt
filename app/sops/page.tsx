@@ -66,7 +66,7 @@ export default function Sops() {
                 </g>
               </svg>
             </Button>
-            <span className="font-kulim font-bold">SOPs</span>
+            <span className="  font-bold">SOPs</span>
             <Ping className="bg-7" />
           </div>
 

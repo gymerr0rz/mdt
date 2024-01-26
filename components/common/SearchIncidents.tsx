@@ -23,7 +23,7 @@ export default function SearchIncidents() {
           <input
             type="text"
             placeholder="Search..."
-            className="from-[#1F1F1F] bg-gradient-to-r to-5 px-5 py-1 rounded-[5px] placeholder:text-white/60 outline-none font-kulim  w-full"
+            className="from-[#1F1F1F] bg-gradient-to-r to-5 px-5 py-1 rounded-[5px] placeholder:text-white/60 outline-none    w-full"
             // onChange={FilterResults}
           />
           <Button>

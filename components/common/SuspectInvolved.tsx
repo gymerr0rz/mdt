@@ -11,6 +11,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
+import { Charges } from '../../types.db';
 
 interface Suspect {
   suspect_name: string;
@@ -49,12 +50,12 @@ export default function SuspectInvolved({
               />
             </svg>
           </Button>
-          <span className="font-kulim font-bold">{suspect_name}</span>
+          <span className="  font-bold">{suspect_name}</span>
         </span>
         <span className="flex gap-2 items-center">
           {suspect_warrant && (
             <span className="flex items-center gap-2 animate-pulse">
-              <h1 className="font-kulim italic font-bold text-7 text-sm">
+              <h1 className="  italic font-bold text-7 text-sm">
                 Active Warrant
               </h1>
               <TooltipProvider>
@@ -98,7 +99,7 @@ export default function SuspectInvolved({
           )}
           <ComboboxDemo
             placeholder="Search Criminal Fines..."
-            list={ListCriminalHistory}
+            list={ListCriminalHistory as Charges[]}
           >
             <Button variant="icon-green" size="icon-sm">
               <svg
@@ -129,7 +130,7 @@ export default function SuspectInvolved({
       </div>
       <div
         id="incident-calculator"
-        className="w-full from-2 from-40%  bg-gradient-to-r to-transparent flex px-5 h-8 justify-between gap-2 items-center font-kulim"
+        className="w-full from-2 from-40%  bg-gradient-to-r to-transparent flex px-5 h-8 justify-between gap-2 items-center  "
       >
         <span className="flex gap-5 items-center">
           <h1>

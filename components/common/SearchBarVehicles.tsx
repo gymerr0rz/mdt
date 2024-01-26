@@ -53,7 +53,7 @@ export default function SearchBarVehicle() {
           <input
             type="text"
             placeholder="Search Vehicles by Plate..."
-            className="bg-transparent outline-none font-kulim  w-full"
+            className="bg-transparent outline-none    w-full"
             onChange={(e) => setValue(e.target.value)}
             value={inputValue}
           />
@@ -67,9 +67,7 @@ export default function SearchBarVehicle() {
             >
               <div className="min-w-16 min-h-16 max-w-16 max-h-16 bg-2 border border-1 rounded-full" />
               <div className="flex flex-col justify-center">
-                <span className="font-kulim font-bold text-xl">
-                  {res.vehicle_model}
-                </span>
+                <span className="  font-bold text-xl">{res.vehicle_model}</span>
                 <span className=" font-light text-xs">
                   PLATE: {res.vehicle_plate}
                 </span>

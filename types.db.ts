@@ -64,3 +64,12 @@ export interface Vehicle {
   vehicle_class: string;
   vehicle_model: string;
 }
+
+export interface Charges {
+  title: string;
+  severity: 'misdemenaor' | 'felony' | 'infraction';
+  points: number;
+  time: number;
+  fine: number;
+  description: string;
+}

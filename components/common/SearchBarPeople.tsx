@@ -53,7 +53,7 @@ export default function SearchBarPeople() {
           <input
             type="text"
             placeholder="Search Profiles..."
-            className="bg-transparent outline-none font-kulim  w-full"
+            className="bg-transparent outline-none    w-full"
             onChange={(e) => setValue(e.target.value)}
             value={inputValue}
           />
@@ -67,7 +67,7 @@ export default function SearchBarPeople() {
             >
               <div className="min-w-16 min-h-16 max-w-16 max-h-16 bg-2 border border-1 rounded-full" />
               <div className="flex flex-col justify-center">
-                <span className="font-kulim font-bold text-xl">{res.name}</span>
+                <span className="  font-bold text-xl">{res.name}</span>
                 <span className=" font-light text-xs">ID: {res.id}</span>
               </div>
             </Link>

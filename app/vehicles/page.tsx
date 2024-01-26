@@ -10,7 +10,7 @@ export default function VehiclesSearch() {
         <MbtNavbar />
         <div className="px-5 py-10 w-full flex justify-center items-center flex-col gap-5">
           <Image src={Police} alt="" height={120} />
-          <span className="font-kulim text-center">
+          <span className="  text-center">
             <h1 className="text-6xl font-bold tracking-tighter">
               Los Santos Police
             </h1>

@@ -27,7 +27,7 @@ export default function InputImage({
         name={id}
         id={id}
         placeholder={placeholder}
-        className="bg-transparent outline-none font-kulim font-bold text-sm w-full"
+        className="bg-transparent outline-none   font-bold text-sm w-full"
         value={value}
         {...rest}
       />

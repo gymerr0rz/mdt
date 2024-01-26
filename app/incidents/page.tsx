@@ -66,7 +66,7 @@ export default function Incidents() {
                 </g>
               </svg>
             </Button>
-            <span className="font-kulim font-bold">Incidents</span>
+            <span className="  font-bold">Incidents</span>
             <Ping className="bg-7" />
             <SearchIncidents />
             <AlertDialog>
@@ -136,14 +136,14 @@ export default function Incidents() {
                 </g>
               </svg>
             </Button>
-            <span className="font-kulim font-bold">Manage Incident</span>
+            <span className="  font-bold">Manage Incident</span>
           </div>
           <textarea
             name="manage-incident"
             id="manage-incident"
             cols={30}
             rows={20}
-            className="resize-none bg-2 p-5 outline-none font-kulim"
+            className="resize-none bg-2 p-5 outline-none  "
             defaultValue={`Location: [Insert Location Here]
 
 Summary:
@@ -176,7 +176,7 @@ Plead:`}
                 </g>
               </svg>
             </Button>
-            <span className="font-kulim font-bold">Evidence</span>
+            <span className="  font-bold">Evidence</span>
           </div>
           <div>
             <InputImage
@@ -204,7 +204,7 @@ Plead:`}
                   />
                 </svg>
               </Button>
-              <span className="font-kulim font-bold">Suspects Involved</span>
+              <span className="  font-bold">Suspects Involved</span>
             </span>
             <DialogDemo />
           </div>

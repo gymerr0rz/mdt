@@ -1,11 +1,6 @@
 import './globals.css';
-import { Inter, Kulim_Park } from 'next/font/google';
+import { Kulim_Park } from 'next/font/google';
 import { cn } from '@/lib/utils';
-
-export const fontInter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-});
 
 export const fontKulim = Kulim_Park({
   variable: '--font-kulim',
@@ -22,8 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          'min-h-screen bg-background font-inter antialiased',
-          fontInter.variable,
+          'min-h-screen bg-background font-kulim antialiased',
           fontKulim.variable
         )}
       >

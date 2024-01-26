@@ -59,7 +59,7 @@ export default function DisplayVehicle({ params }: { params: { id: string } }) {
         <div className="w-full flex gap-5 animate-opacity-down">
           <div className=" w-2/3 flex flex-col gap-5">
             <div className="from-2 from-40%  bg-gradient-to-r to-transparent w-full px-5 py-2 flex justify-between ">
-              <h1 className="flex items-center gap-1 font-kulim">
+              <h1 className="flex items-center gap-1  ">
                 {vehicle.vehicle_model}
                 <b className="text-xs text-1 font-light">
                   ({vehicle.vehicle_plate})
@@ -69,7 +69,7 @@ export default function DisplayVehicle({ params }: { params: { id: string } }) {
               <div id="buttons" className="flex gap-2">
                 {vehicle.vehicle_bolo && (
                   <span className="flex gap-2 items-center animate-pulse">
-                    <h1 className="font-kulim italic font-bold text-7 text-sm">
+                    <h1 className="  italic font-bold text-7 text-sm">
                       Active BOLO
                     </h1>
                     <Button

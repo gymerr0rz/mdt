@@ -32,7 +32,7 @@ export default function Dispatch() {
                 </g>
               </svg>
             </Button>
-            <span className="font-kulim font-bold">Recent Calls</span>
+            <span className="  font-bold">Recent Calls</span>
             <Ping className="bg-1" />
           </div>
           <RecentCalls />
@@ -59,7 +59,7 @@ export default function Dispatch() {
                 </g>
               </svg>
             </Button>
-            <span className="font-kulim font-bold">Active Employees</span>
+            <span className="  font-bold">Active Employees</span>
           </div>
           <div className="grid grid-cols-3 gap-4 items-center justify-center">
             <Label theme="green">[304] M. FLEXTOWN</Label>
@@ -87,7 +87,7 @@ export default function Dispatch() {
                 </g>
               </svg>
             </Button>
-            <span className="font-kulim font-bold">Ambulance</span>
+            <span className="  font-bold">Ambulance</span>
           </div>
           <div className="grid grid-cols-3 gap-4 items-center justify-center">
             <Label theme="green">[304] M. FLEXTOWN</Label>
@@ -115,7 +115,7 @@ export default function Dispatch() {
                 </g>
               </svg>
             </Button>
-            <span className="font-kulim font-bold">Los Santos Police</span>
+            <span className="  font-bold">Los Santos Police</span>
           </div>
           <div className="grid grid-cols-3 gap-4 items-center justify-center">
             <Label theme="green">[304] M. FLEXTOWN</Label>
@@ -142,7 +142,7 @@ export default function Dispatch() {
                 </g>
               </svg>
             </Button>
-            <span className="font-kulim font-bold">Blaint County Sheriff</span>
+            <span className="  font-bold">Blaint County Sheriff</span>
           </div>
           <div className="grid grid-cols-3 gap-4 items-center justify-center">
             <Label theme="green">[304] M. FLEXTOWN</Label>

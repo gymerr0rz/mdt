@@ -16,18 +16,25 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover';
+import { Charges } from '../../types.db';
 
 interface Combobox {
   children: React.ReactNode;
   placeholder: string;
-  list: List[];
+  list: Default[] | Charges[];
 }
 
-interface List {
+interface Default {
   value: string;
   label: string;
   fine?: number;
 }
+
+const Values = {
+  misdemeanor: 'text-orange-300',
+  infraction: 'text-yellow-300',
+  felony: 'text-red-300',
+};
 
 export function ComboboxDemo({ children, placeholder, list }: Combobox) {
   const [open, setOpen] = React.useState(false);
@@ -38,30 +45,34 @@ export function ComboboxDemo({ children, placeholder, list }: Combobox) {
       <PopoverTrigger asChild>
         <div aria-expanded={open}>{children}</div>
       </PopoverTrigger>
-      <PopoverContent className=" p-0 m-5 shadow-xl">
+      <PopoverContent className=" p-1 m-5 shadow-xl">
         <Command>
           <CommandInput placeholder={placeholder} />
+
           <CommandEmpty>No tags found.</CommandEmpty>
-          <div className="overflow-auto max-h-[300px]">
-            <CommandGroup heading="OFFENSES AGAINST PERSONS">
-              {list.map((framework) => (
-                <>
-                  <CommandItem
-                    key={framework.value}
-                    value={framework.value}
-                    onSelect={(currentValue) => {
-                      setValue(currentValue === value ? '' : currentValue);
-                      setOpen(false);
-                    }}
-                  >
-                    {framework.label}
-                    {framework.fine && (
-                      <CommandShortcut>${framework.fine}</CommandShortcut>
-                    )}
-                  </CommandItem>
-                </>
-              ))}
-            </CommandGroup>
+          <div className="overflow-auto max-h-[300px]  ">
+            {list.map((framework) => (
+              <>
+                <CommandItem
+                  key={framework?.value || framework?.title}
+                  value={framework?.value || framework?.title}
+                  onSelect={(currentValue) => {
+                    setValue(currentValue === value ? '' : currentValue);
+                    setOpen(false);
+                  }}
+                >
+                  <span className={Values[framework.severity]}>
+                    {framework.label || framework.title}
+                  </span>
+
+                  {framework.fine && (
+                    <CommandShortcut className="!text-xs">
+                      [${framework.fine}]
+                    </CommandShortcut>
+                  )}
+                </CommandItem>
+              </>
+            ))}
           </div>
         </Command>
       </PopoverContent>

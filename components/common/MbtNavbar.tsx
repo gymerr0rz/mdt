@@ -18,7 +18,7 @@ export default function MbtNavbar() {
       <div className="px-5">
         <div className="flex justify-center items-center gap-3">
           <Image src={LosSantosPolice} alt="" />
-          <div className=" font-kulim whitespace-nowrap">
+          <div className="   whitespace-nowrap">
             <Image src={HorizonLogo} alt="" />
             <h1>Los Santos Police</h1>
           </div>
@@ -28,7 +28,7 @@ export default function MbtNavbar() {
           <li id="dispatch">
             <Link
               href="/"
-              className={`flex gap-3 font-kulim font-bold w-52 py-2  rounded-xl transition-colors ${
+              className={`flex gap-3   font-bold w-52 py-2  rounded-xl transition-colors ${
                 path === '/'
                   ? 'text-1 hover:text-3 bg-2'
                   : 'hover:text-1 text-3 hover:bg-2'
@@ -62,7 +62,7 @@ export default function MbtNavbar() {
           <li id="profiles">
             <Link
               href="/profiles"
-              className={`flex gap-3 font-kulim font-bold w-52 py-2  rounded-xl transition-colors ${
+              className={`flex gap-3   font-bold w-52 py-2  rounded-xl transition-colors ${
                 path === '/profiles' || path?.includes('/profiles')
                   ? 'text-1 hover:text-3 bg-2'
                   : 'hover:text-1 text-3 hover:bg-2'
@@ -89,7 +89,7 @@ export default function MbtNavbar() {
           <li id="incidents">
             <Link
               href="/incidents"
-              className={`flex gap-3 font-kulim font-bold w-52 py-2  rounded-xl transition-colors ${
+              className={`flex gap-3   font-bold w-52 py-2  rounded-xl transition-colors ${
                 path === '/incidents'
                   ? 'text-1 hover:text-3 bg-2'
                   : 'hover:text-1 text-3 hover:bg-2'
@@ -134,7 +134,7 @@ export default function MbtNavbar() {
           <li id="citations">
             <Link
               href="/citations"
-              className={`flex gap-3 font-kulim font-bold w-52 py-2  rounded-xl transition-colors ${
+              className={`flex gap-3   font-bold w-52 py-2  rounded-xl transition-colors ${
                 path === '/citations' || path?.includes('/citations')
                   ? 'text-1 hover:text-3 bg-2'
                   : 'hover:text-1 text-3 hover:bg-2'
@@ -166,7 +166,7 @@ export default function MbtNavbar() {
           <li id="warrants">
             <Link
               href="/warrants"
-              className={`flex gap-3 font-kulim font-bold w-52 py-2  rounded-xl transition-colors ${
+              className={`flex gap-3   font-bold w-52 py-2  rounded-xl transition-colors ${
                 path === '/warrants'
                   ? 'text-1 hover:text-3 bg-2'
                   : 'hover:text-1 text-3 hover:bg-2'
@@ -192,7 +192,7 @@ export default function MbtNavbar() {
           <li id="vehicles">
             <Link
               href="/vehicles"
-              className={`flex gap-3 font-kulim font-bold w-52 py-2  rounded-xl transition-colors ${
+              className={`flex gap-3   font-bold w-52 py-2  rounded-xl transition-colors ${
                 path === '/vehicles' || path?.includes('/vehicles')
                   ? 'text-1 hover:text-3 bg-2'
                   : 'hover:text-1 text-3 hover:bg-2'
@@ -225,7 +225,7 @@ export default function MbtNavbar() {
           <li id="bolos">
             <Link
               href="/bolos"
-              className={`flex gap-3 font-kulim font-bold w-52 py-2  rounded-xl transition-colors ${
+              className={`flex gap-3   font-bold w-52 py-2  rounded-xl transition-colors ${
                 path === '/bolos'
                   ? 'text-1 hover:text-3 bg-2'
                   : 'hover:text-1 text-3 hover:bg-2'
@@ -260,7 +260,7 @@ export default function MbtNavbar() {
           <li id="sops">
             <Link
               href="/sops"
-              className={`flex gap-3 font-kulim font-bold w-52 py-2  rounded-xl transition-colors ${
+              className={`flex gap-3   font-bold w-52 py-2  rounded-xl transition-colors ${
                 path === '/sops'
                   ? 'text-1 hover:text-3 bg-2'
                   : 'hover:text-1 text-3 hover:bg-2'
@@ -305,7 +305,7 @@ export default function MbtNavbar() {
           <li id="roster">
             <Link
               href="/roster"
-              className={`flex gap-3 font-kulim font-bold w-52 py-2  rounded-xl transition-colors ${
+              className={`flex gap-3   font-bold w-52 py-2  rounded-xl transition-colors ${
                 path === '/roster'
                   ? 'text-1 hover:text-3 bg-2'
                   : 'hover:text-1 text-3 hover:bg-2'

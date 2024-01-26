@@ -66,7 +66,7 @@ export default function Incidents() {
                 </g>
               </svg>
             </Button>
-            <span className="font-kulim font-bold">BOLOs</span>
+            <span className="  font-bold">BOLOs</span>
             <Ping className="bg-7" />
             <SearchIncidents />
             <AlertDialog>
@@ -135,7 +135,7 @@ export default function Incidents() {
                 </g>
               </svg>
             </Button>
-            <span className="font-kulim font-bold">Manage BOLOs</span>
+            <span className="  font-bold">Manage BOLOs</span>
           </div>
           <Input id="" placeholder="Enter Title..." className="rounded-none" />
           <Input
@@ -148,7 +148,7 @@ export default function Incidents() {
             id="manage-bolos"
             cols={30}
             rows={20}
-            className="resize-none bg-2 px-5 py-2 outline-none font-kulim"
+            className="resize-none bg-2 px-5 py-2 outline-none  "
             placeholder="Enter Summary..."
           />
           <div className="w-full from-2 from-40%  bg-gradient-to-r to-transparent flex px-5 h-12 justify-start gap-2 items-center">
@@ -170,7 +170,7 @@ export default function Incidents() {
                 </g>
               </svg>
             </Button>
-            <span className="font-kulim font-bold">Evidence</span>
+            <span className="  font-bold">Evidence</span>
           </div>
           <div>
             <InputImage
@@ -198,7 +198,7 @@ export default function Incidents() {
                   />
                 </svg>
               </Button>
-              <span className="font-kulim font-bold">Suspects Involved</span>
+              <span className="  font-bold">Suspects Involved</span>
             </span>
             <DialogDemo />
           </div>

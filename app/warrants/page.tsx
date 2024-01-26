@@ -51,7 +51,7 @@ export default function Warrants() {
                 </g>
               </svg>
             </Button>
-            <span className="font-kulim font-bold">Active Warrants</span>
+            <span className="  font-bold">Active Warrants</span>
             <Ping className="bg-7" />
           </div>
           <WarrantsAccordion />
@@ -97,7 +97,7 @@ export default function Warrants() {
                 </g>
               </svg>
             </Button>
-            <span className="font-kulim font-bold">Requested Warrants</span>
+            <span className="  font-bold">Requested Warrants</span>
             <Ping className="bg-1" />
           </div>
           <RequestAccordion />

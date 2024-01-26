@@ -33,9 +33,7 @@ export default function Person() {
                   </g>
                 </svg>
               </Button>
-              <span className="font-kulim font-bold">
-                Issue a Person Citations
-              </span>
+              <span className="  font-bold">Issue a Person Citations</span>
             </div>
           </div>
           <div className="flex flex-col gap-5">
@@ -112,7 +110,7 @@ export default function Person() {
                   />
                 </svg>
               </Button>
-              <span className="font-kulim font-bold">Charges</span>
+              <span className="  font-bold">Charges</span>
             </span>
             <ComboboxDemo
               placeholder="Search Criminal Fines..."
@@ -146,7 +144,7 @@ export default function Person() {
           </div>
           <div
             id="incident-calculator"
-            className="w-full from-2 from-40%  bg-gradient-to-r to-transparent flex px-5 h-8 justify-start gap-2 items-center font-kulim"
+            className="w-full from-2 from-40%  bg-gradient-to-r to-transparent flex px-5 h-8 justify-start gap-2 items-center  "
           >
             <span className="flex gap-5 items-center">
               <h1>

@@ -24,7 +24,7 @@ export default function InputProfile({
     <div className="w-full flex flex-col gap-2 bg-2 py-2 px-5 rounded-xl">
       <label
         htmlFor={id}
-        className={`transition-colors text-xs uppercase tracking-[0.2em] font-kulim ${
+        className={`transition-colors text-xs uppercase tracking-[0.2em]   ${
           editMode && 'text-1'
         }`}
       >
@@ -36,7 +36,7 @@ export default function InputProfile({
         name={id}
         id={id}
         placeholder={placeholder}
-        className="bg-transparent outline-none font-kulim  text-lg"
+        className="bg-transparent outline-none    text-lg"
         value={value}
         {...rest}
       />

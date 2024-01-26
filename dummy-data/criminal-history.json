@@ -1,98 +1,523 @@
 [
   {
-    "value": "Simple Assault",
-    "label": "Simple Assault",
-    "fine": 300,
-    "category": 1
+    "title": "Simple Assault",
+    "severity": "misdemeanor",
+    "time": 2,
+    "fine": 250,
+    "points": 0,
+    "description": "[P.C. 1.01] Attempts to or commits an injury upon another person without the use of a weapon"
   },
+
   {
-    "value": "Assault",
-    "label": "Assault",
-    "fine": 300,
-    "category": 1
+    "title": "Assault",
+    "severity": "misdemeanor",
+    "time": 4,
+    "fine": 500,
+    "points": 0,
+    "description": "[P.C. 1.02] Attempts to or commits injury upon another person while using a weapon"
   },
+
   {
-    "value": "Aggravated Assault",
-    "label": "Aggravated Assault",
-    "fine": 300,
-    "category": 1
+    "title": "Aggravated Assault",
+    "severity": "felony",
+    "time": 8,
+    "fine": 750,
+    "points": 0,
+    "description": "[P.C. 1.03] Attempts to or commits serious or grievous bodily injury upon someone with a weapon"
   },
+
   {
-    "value": "remix",
-    "label": "Simple Assault of LEO",
-    "fine": 300,
-    "category": 1
+    "title": "Simple Assault of an LEO",
+    "severity": "misdemeanor",
+    "time": 6,
+    "fine": 350,
+    "points": 0,
+    "description": "[PC 1.04] Simple assault that occurs upon an on duty LEO"
   },
+
   {
-    "value": "astro",
-    "label": "Assault of LEO",
-    "fine": 300,
-    "category": 1
+    "title": "Assault of a LEO",
+    "severity": "misdemeanor",
+    "time": 8,
+    "fine": 600,
+    "points": 0,
+    "description": "[PC 1.05] Simple assault that occurs upon an on duty LEO"
   },
+
   {
-    "value": "astroa",
-    "label": "Aggravated Assault of LEO",
-    "fine": 300,
-    "category": 1
+    "title": "Aggravated Assault of LEO",
+    "severity": "felony",
+    "time": 15,
+    "fine": 900,
+    "points": 0,
+    "description": "[PC 1.06] Aggravated Assault that occurs upon an on duty LEO"
   },
+
   {
-    "value": "astrob",
-    "label": "Simple Battery",
-    "fine": 300,
-    "category": 1
+    "title": "Simple Batter",
+    "severity": "misdemeanor",
+    "time": 6,
+    "fine": 500,
+    "points": 0,
+    "description": "[PC 1.07] Attempts to or commits a violent injury upon another person without the use of a weapon and with intent or pre-meditation"
   },
+
   {
-    "value": "astroc",
-    "label": "Battery",
-    "fine": 300,
-    "category": 1
+    "title": "Battery",
+    "severity": "felony",
+    "time": 10,
+    "fine": 1000,
+    "points": 0,
+    "description": "[PC 1.08] Attempts to or commits injury upon another person while using a weapon and with intent or pre-meditation."
   },
+
   {
-    "value": "next.jsh",
-    "label": "Simple Assault",
-    "fine": 300,
-    "category": 1
+    "title": "Aggravated Battery",
+    "severity": "felony",
+    "time": 15,
+    "fine": 1500,
+    "points": 0,
+    "description": "[PC 1.09] Attempts to or commits serious or grievous bodily injury upon someone with a weapon and with intent or pre-meditation."
   },
+
   {
-    "value": "sveltekith",
-    "label": "Assault",
-    "fine": 300,
-    "category": 1
+    "title": "Simple Battery of LEO",
+    "severity": "felony",
+    "time": 10,
+    "fine": 1500,
+    "points": 0,
+    "description": "[PC 1.10] Simple battery that occurs upon an on duty LEO"
   },
+
   {
-    "value": "nuxt.jsh",
-    "label": "Aggravated Assault",
-    "fine": 300,
-    "category": 1
+    "title": "Battery of LEO",
+    "severity": "felony",
+    "time": 15,
+    "fine": 2500,
+    "points": 0,
+    "description": "[PC 1.11] Battery that occurs upon an on duty LEO"
   },
+
   {
-    "value": "remixh",
-    "label": "Simple Assault of LEO",
-    "fine": 300,
-    "category": 1
+    "title": "Aggravated Battery of LEO",
+    "severity": "felony",
+    "time": 20,
+    "fine": 3500,
+    "points": 0,
+    "description": "[PC 1.12] Aggravated battery that occurs upon an on duty LEO"
   },
+
   {
-    "value": "astroh",
-    "label": "Assault of LEO",
-    "fine": 300,
-    "category": 1
+    "title": "Attempted Murder Second Degree",
+    "severity": "felony",
+    "time": 25,
+    "fine": 3000,
+    "points": 0,
+    "description": "[PC 1.13] The failed or aborted attempt to murder another person"
   },
+
   {
-    "value": "astroah",
-    "label": "Aggravated Assault of LEO",
-    "fine": 300,
-    "category": 1
+    "title": "Attempted Murder First Degree",
+    "severity": "felony",
+    "time": 35,
+    "fine": 5000,
+    "points": 0,
+    "description": "[PC 1.14] The failed or aborted attempt to murder another person with premeditation and deliberation"
   },
+
   {
-    "value": "astrobh",
-    "label": "Simple Battery",
-    "fine": 300,
-    "category": 1
+    "title": "Attempted Murder of LEO Second Degree",
+    "severity": "felony",
+    "time": 40,
+    "fine": 4000,
+    "points": 0,
+    "description": "[PC 1.15] The failed or aborted attempt to murder a LEO"
   },
+
   {
-    "value": "astroch",
-    "label": "Battery",
+    "title": "Attempted Murder of LEO First Degree",
+    "severity": "felony",
+    "time": 65,
+    "fine": 6500,
+    "points": 0,
+    "description": "[PC 1.16] The failed or aborted attempt to murder a LEO with premeditation and deliberation"
+  },
+
+  {
+    "title": "Involuntary Manslaughter",
+    "severity": "felony",
+    "time": 30,
+    "fine": 3500,
+    "points": 0,
+    "description": "[PC 1.17] Recklessly or accidentally Kills another person"
+  },
+
+  {
+    "title": "Vehicular Manslaughter",
+    "severity": "felony",
+    "time": 40,
+    "fine": 5000,
+    "points": 0,
+    "description": "[PC 1.18] Recklessly or accidentally kills another person while driving a motor vehicle"
+  },
+
+  {
+    "title": "Voluntary Manslaughter",
+    "severity": "felony",
+    "time": 40,
+    "fine": 7000,
+    "points": 0,
+    "description": "[PC 1.19] Recklessly or accidentally kills another person with intent to physically hurt the person"
+  },
+
+  {
+    "title": "Second Degree Murder",
+    "severity": "felony",
+    "time": 60,
+    "fine": 7500,
+    "points": 0,
+    "description": "[PC 1.20] Kills another person with the intent to kill"
+  },
+
+  {
+    "title": "First Degree Murder",
+    "severity": "felony",
+    "time": 90,
+    "fine": 10000,
+    "points": 0,
+    "description": "[PC 1.21] Kills another person with the intent to kill with premeditation and deliberation"
+  },
+
+  {
+    "title": "Unlawful Imprisonment",
+    "severity": "misdemeanor",
+    "time": 8,
+    "fine": 350,
+    "points": 0,
+    "description": "[PC 1.22] Restricts a person's movement within any area without justification or consent"
+  },
+
+  {
+    "title": "Kidnapping",
+    "severity": "felony",
+    "time": 6,
+    "fine": 500,
+    "points": 0,
+    "description": "[PC 1.23] Abducts another person and holds them against their will for an extended period of time"
+  },
+
+  {
+    "title": "Hostage Taking",
+    "severity": "felony",
+    "time": 8,
+    "fine": 750,
+    "points": 0,
+    "description": "[PC 1.24] Holds a person with a threat to their life or well being with intent or declaration of using them for leverage for escape or personal gain"
+  },
+
+  {
+    "title": "Criminal Threats",
+    "severity": "misdemeanor",
+    "time": 12,
+    "fine": 1000,
+    "points": 0,
+    "description": "[PC 1.25] Any person who willfully utters a threat to commit a crime which will result in death or bodily injury to another person"
+  },
+
+  {
+    "title": "Reckless Endangerment",
+    "severity": "misdemeanor",
+    "time": 12,
+    "fine": 750,
+    "points": 0,
+    "description": "[PC 1.26] Disregard for one's own life or the life of another"
+  },
+
+  {
+    "title": "Harassment",
+    "severity": "misdemeanor",
+    "time": 6,
+    "fine": 250,
+    "points": 0,
+    "description": "[PC 1.27] Unwanted, uninvited, and unwelcome contact that causes nuisance, alarm, or substantial emotional distress without any legitimate purpose"
+  },
+
+  {
+    "title": "Torture",
+    "severity": "felony",
+    "time": 90,
+    "fine": 10000,
+    "points": 0,
+    "description": "[PC 1.28] To include acts specifically intended to inflict severe physical or mental pain or suffering"
+  },
+
+  {
+    "title": "Arson",
+    "severity": "felony",
+    "time": 24,
+    "fine": 3000,
+    "points": 0,
+    "description": "[PC 2.01] Willfully and maliciously setting a fire, causing, or aiding in someone to burn a structure, forest land, or property"
+  },
+
+  {
+    "title": "Aiding and Abetting",
+    "severity": "felony",
+    "time": 12,
+    "fine": 500,
+    "points": 0,
+    "description": "[PC 2.02] To assist someone in committing or to encourage someone to commit a crime, in a clear premeditated manner"
+  },
+
+  {
+    "title": "Trespassing",
+    "severity": "misdemeanor",
+    "time": 6,
+    "fine": 250,
+    "points": 0,
+    "description": "[PC 2.03] Entering or remaining on someone else's property without permission or a right to do so"
+  },
+
+  {
+    "title": "Trespassing Within A Restricted Facility",
+    "severity": "felony",
+    "time": 12,
+    "fine": 500,
+    "points": 0,
+    "description": "[PC 2.04] A person who, without proper authorization, enters any government owned or managed facility that is secured with the intent of keeping ordinary citizens out"
+  },
+
+  {
+    "title": "Loitering",
+    "severity": "infraction",
+    "time": 3,
+    "fine": 150,
+    "points": 0,
+    "description": "[PC 2.05] To be dilatory, delay, linger, saunter, or to idle, in a public area without a purpose"
+  },
+
+  {
+    "title": "Loitering on Government Property",
+    "severity": "misdemeanor",
+    "time": 6,
     "fine": 300,
-    "category": 1
+    "points": 0,
+    "description": "[PC 2.06] To be dilatory, delay, linger, saunter, or to idle, on Government property without a purpose"
+  },
+
+  {
+    "title": "ATM Tampering",
+    "severity": "felony",
+    "time": 12,
+    "fine": 1000,
+    "points": 0,
+    "description": "[PC 2.07] Any unauthorized modification or manipulation of an Automated Teller Machine (ATM) by an individual or group of individuals with the intention of stealing money or sensitive information"
+  },
+
+  {
+    "title": "Electronic Tampering",
+    "severity": "misdemeanor",
+    "time": 8,
+    "fine": 500,
+    "points": 0,
+    "description": "[PC 2.08] Electronic tampering with property of another person or entity with intent to cause substantial inconvenience or gain unlawful access for monetary gain"
+  },
+
+  {
+    "title": "Robbery",
+    "severity": "felony",
+    "time": 16,
+    "fine": 1000,
+    "points": 0,
+    "description": "[PC 2.09] The direct taking of property (including money) from a person (victim) through force, threat or intimidation"
+  },
+
+  {
+    "title": "Burglary",
+    "severity": "felony",
+    "time": 8,
+    "fine": 500,
+    "points": 0,
+    "description": "[PC 2.10] The unlawful entry of a structure to commit  theft"
+  },
+
+  {
+    "title": "Breaking and Entering",
+    "severity": "misdemeanor",
+    "time": 6,
+    "fine": 300,
+    "points": 0,
+    "description": "[PC 2.11] The entering of a building or structure through force without authorization"
+  },
+
+  {
+    "title": "Petty Theft",
+    "severity": "misdemeanor",
+    "time": 6,
+    "fine": 1000,
+    "points": 0,
+    "description": "[PC 2.12] 5k and under"
+  },
+
+  {
+    "title": "Theft Second Degree",
+    "severity": "felony",
+    "time": 12,
+    "fine": 2500,
+    "points": 0,
+    "description": "[PC 2.13] 5.01k to 19.99k"
+  },
+
+  {
+    "title": "Theft First Degree",
+    "severity": "felony",
+    "time": 25,
+    "fine": 4000,
+    "points": 0,
+    "description": "[PC 2.14] 20k to 49.99k"
+  },
+
+  {
+    "title": "Grand Theft Second Degree",
+    "severity": "felony",
+    "time": 40,
+    "fine": 6000,
+    "points": 0,
+    "description": "[PC 2.15] 50k to 99k"
+  },
+
+  {
+    "title": "Grand Theft First Degree",
+    "severity": "felony",
+    "time": 60,
+    "fine": 7500,
+    "points": 0,
+    "description": "[PC 2.16] 100k or more"
+  },
+
+  {
+    "title": "Grand Theft Auto",
+    "severity": "felony",
+    "time": 24,
+    "fine": 2000,
+    "points": 0,
+    "description": "[PC 2.17] To take someone else's vehicle, without permission and with the intent permanently or significantly to deprive the owner of it"
+  },
+
+  {
+    "title": "Joyriding",
+    "severity": "misdemeanor",
+    "time": 6,
+    "fine": 250,
+    "points": 0,
+    "description": "[PC 2.18] The unlawful taking of a vehicle without the consent of the owner, without intent to permanently deprive the owner of the vehicle"
+  },
+
+  {
+    "title": "Theft of a Government Vehicle",
+    "severity": "felony",
+    "time": 12,
+    "fine": 2500,
+    "points": 0,
+    "description": "[PC 2.19] The unlawful taking of a Government vehicle"
+  },
+
+  {
+    "title": "Carjacking",
+    "severity": "felony",
+    "time": 15,
+    "fine": 1000,
+    "points": 0,
+    "description": "[PC 2.20] Taking a motor vehicle by force, violence, and/or intimidation with intent to cause death or serious bodily injury"
+  },
+
+  {
+    "title": "Possession of Stolen Property",
+    "severity": "felony",
+    "time": 6,
+    "fine": 500,
+    "points": 0,
+    "description": "[PC 2.21] Receiving, disposing, or retaining property which was known or should known to be stolen, unless it is obtained with intent to restore it to the owner"
+  },
+
+  {
+    "title": "Possession of Marked Money",
+    "severity": "felony",
+    "time": 10,
+    "fine": 750,
+    "points": 0,
+    "description": "[PC 2.22] Possession of money that is marked"
+  },
+
+  {
+    "title": "Extortion",
+    "severity": "felony",
+    "time": 36,
+    "fine": 3000,
+    "points": 0,
+    "description": "[PC 2.23] The use of force, or threat of force, to obtain money or another item of value from another person"
+  },
+
+  {
+    "title": "Forgery",
+    "severity": "felony",
+    "time": 25,
+    "fine": 2500,
+    "points": 0,
+    "description": "[PC 2.24] The crime of creating a false document, altering a document, or writing a false signature for the illegal benefit of the person making the forgery"
+  },
+
+  {
+    "title": "Fraud",
+    "severity": "felony",
+    "time": 25,
+    "fine": 2500,
+    "points": 0,
+    "description": "[PC 2.25] Intentional deception to secure unfair or unlawful gain, or to deprive a victim of a legal right"
+  },
+
+  {
+    "title": "Vandalism",
+    "severity": "misdemeanor",
+    "time": 6,
+    "fine": 250,
+    "points": 0,
+    "description": "[PC 2.26] The act of intentionally defacing or damaging another person's property"
+  },
+
+  {
+    "title": "Vandalism fo Government Property",
+    "severity": "misdemeanor",
+    "time": 10,
+    "fine": 500,
+    "points": 0,
+    "description": "[PC 2.27] The act of intentionally defacing or damaging Government property"
+  },
+
+  {
+    "title": "Destruction of Private Property",
+    "severity": "felony",
+    "time": 10,
+    "fine": 1000,
+    "points": 0,
+    "description": "[PC 2.28] The act of destroying (intentional or not) another person's property"
+  },
+
+  {
+    "title": "Destruction of Government Property",
+    "severity": "felony",
+    "time": 18,
+    "fine": 1500,
+    "points": 0,
+    "description": "[PC 2.29] The act of destroying (intentional or not) Government Property"
+  },
+
+  {
+    "title": "Possession of Items Used in the Commission of a Crime",
+    "severity": "misdemeanor",
+    "time": 6,
+    "fine": 250,
+    "points": 0,
+    "description": "[PC 2.30] Any tool, explosive, or other device commonly used in the commission of burglary, theft, or other crime with the intent to make use thereof in the commission of a crime"
   }
 ]

@@ -62,11 +62,11 @@ export function RecentCalls() {
 
         <AccordionContent>
           <div className="p-5  from-2 from-40%  bg-gradient-to-r to-transparent grid grid-cols-2 gap-5 relative">
-            <h1 className="absolute p-5 top-0 right-0 text-sm text-3 font-bold font-kulim">
+            <h1 className="absolute p-5 top-0 right-0 text-sm text-3 font-bold  ">
               14 minutes ago
             </h1>
             <div className="flex flex-col">
-              <label className="text-xs uppercase tracking-[0.2em] font-kulim text-1 font-bold flex gap-2 items-center">
+              <label className="text-xs uppercase tracking-[0.2em]   text-1 font-bold flex gap-2 items-center">
                 <svg
                   width="12"
                   height="12"
@@ -91,7 +91,7 @@ export function RecentCalls() {
             </div>
 
             <div className="flex flex-col">
-              <label className="text-xs uppercase tracking-[0.2em] font-kulim text-1 font-bold flex gap-2 items-center">
+              <label className="text-xs uppercase tracking-[0.2em]   text-1 font-bold flex gap-2 items-center">
                 <svg
                   width="21"
                   height="11"
@@ -137,7 +137,7 @@ export function RecentCalls() {
             </div>
 
             <div className="flex flex-col">
-              <label className="text-xs uppercase tracking-[0.2em] font-kulim text-1 font-bold flex gap-2 items-center">
+              <label className="text-xs uppercase tracking-[0.2em]   text-1 font-bold flex gap-2 items-center">
                 <svg
                   width="11"
                   height="11"
@@ -162,7 +162,7 @@ export function RecentCalls() {
             </div>
 
             <div className="flex flex-col">
-              <label className="text-xs uppercase tracking-[0.2em] font-kulim text-1 font-bold flex gap-2 items-center">
+              <label className="text-xs uppercase tracking-[0.2em]   text-1 font-bold flex gap-2 items-center">
                 <svg
                   width="13"
                   height="11"
@@ -236,12 +236,12 @@ export function RecentCalls() {
 
         <AccordionContent>
           <div className="p-5  from-2 from-40%  bg-gradient-to-r to-transparent grid grid-cols-2 gap-5 relative">
-            <h1 className="absolute p-5 top-0 right-0 text-sm text-3 font-bold font-kulim">
+            <h1 className="absolute p-5 top-0 right-0 text-sm text-3 font-bold  ">
               14 minutes ago
             </h1>
             <h1 className="col-span-2 text-base font-medium">Vehicle Theft</h1>
             <div className="flex flex-col">
-              <label className="text-xs uppercase tracking-[0.2em] font-kulim text-1 font-bold flex gap-2 items-center">
+              <label className="text-xs uppercase tracking-[0.2em]   text-1 font-bold flex gap-2 items-center">
                 <svg
                   width="12"
                   height="12"
@@ -266,7 +266,7 @@ export function RecentCalls() {
             </div>
 
             <div className="flex flex-col">
-              <label className="text-xs uppercase tracking-[0.2em] font-kulim text-1 font-bold flex gap-2 items-center">
+              <label className="text-xs uppercase tracking-[0.2em]   text-1 font-bold flex gap-2 items-center">
                 <svg
                   width="21"
                   height="11"
@@ -312,7 +312,7 @@ export function RecentCalls() {
             </div>
 
             <div className="flex flex-col">
-              <label className="text-xs uppercase tracking-[0.2em] font-kulim text-1 font-bold flex gap-2 items-center">
+              <label className="text-xs uppercase tracking-[0.2em]   text-1 font-bold flex gap-2 items-center">
                 <svg
                   width="11"
                   height="11"
@@ -337,7 +337,7 @@ export function RecentCalls() {
             </div>
 
             <div className="flex flex-col">
-              <label className="text-xs uppercase tracking-[0.2em] font-kulim text-1 font-bold flex gap-2 items-center">
+              <label className="text-xs uppercase tracking-[0.2em]   text-1 font-bold flex gap-2 items-center">
                 <svg
                   width="13"
                   height="11"
@@ -411,12 +411,12 @@ export function RecentCalls() {
 
         <AccordionContent>
           <div className="p-5  from-2 from-40%  bg-gradient-to-r to-transparent grid grid-cols-2 gap-5 relative">
-            <h1 className="absolute p-5 top-0 right-0 text-sm text-3 font-bold font-kulim">
+            <h1 className="absolute p-5 top-0 right-0 text-sm text-3 font-bold  ">
               14 minutes ago
             </h1>
             <h1 className="col-span-2 text-base font-medium">Vehicle Theft</h1>
             <div className="flex flex-col">
-              <label className="text-xs uppercase tracking-[0.2em] font-kulim text-1 font-bold flex gap-2 items-center">
+              <label className="text-xs uppercase tracking-[0.2em]   text-1 font-bold flex gap-2 items-center">
                 <svg
                   width="12"
                   height="12"
@@ -441,7 +441,7 @@ export function RecentCalls() {
             </div>
 
             <div className="flex flex-col">
-              <label className="text-xs uppercase tracking-[0.2em] font-kulim text-1 font-bold flex gap-2 items-center">
+              <label className="text-xs uppercase tracking-[0.2em]   text-1 font-bold flex gap-2 items-center">
                 <svg
                   width="21"
                   height="11"
@@ -487,7 +487,7 @@ export function RecentCalls() {
             </div>
 
             <div className="flex flex-col">
-              <label className="text-xs uppercase tracking-[0.2em] font-kulim text-1 font-bold flex gap-2 items-center">
+              <label className="text-xs uppercase tracking-[0.2em]   text-1 font-bold flex gap-2 items-center">
                 <svg
                   width="11"
                   height="11"
@@ -512,7 +512,7 @@ export function RecentCalls() {
             </div>
 
             <div className="flex flex-col">
-              <label className="text-xs uppercase tracking-[0.2em] font-kulim text-1 font-bold flex gap-2 items-center">
+              <label className="text-xs uppercase tracking-[0.2em]   text-1 font-bold flex gap-2 items-center">
                 <svg
                   width="13"
                   height="11"
