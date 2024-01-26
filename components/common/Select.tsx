@@ -17,12 +17,12 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover';
-import { Charges } from '../../types.db';
+import { Charges } from '@/types.db';
 
 interface Combobox {
   children: React.ReactNode;
   placeholder: string;
-  list: Default[] | Charges[];
+  list: (Default | Charges)[];
 }
 
 interface Default {
@@ -30,12 +30,6 @@ interface Default {
   label: string;
   fine?: number;
 }
-
-const Values = {
-  misdemeanor: 'text-orange-300',
-  infraction: 'text-yellow-300',
-  felony: 'text-red-300',
-};
 
 export function ComboboxDemo({ children, placeholder, list }: Combobox) {
   const [open, setOpen] = React.useState(false);
@@ -56,16 +50,21 @@ export function ComboboxDemo({ children, placeholder, list }: Combobox) {
             {list.map((framework, idx) => (
               <CommandItem
                 key={idx}
-                value={framework?.value || framework?.title}
+                value={
+                  (framework as Default)?.value || (framework as Charges)?.title
+                }
                 onSelect={(currentValue) => {
                   setValue(currentValue === value ? '' : currentValue);
                   setOpen(false);
                 }}
                 id="command-list"
-                onMouseOver={() => setHover(framework.description)}
+                onMouseOver={() =>
+                  setHover((framework as Charges)?.description)
+                }
               >
                 <span className="font-[600]">
-                  {framework.label || framework.title}
+                  {(framework as Default)?.label ||
+                    (framework as Charges)?.title}
                 </span>
 
                 {framework.fine && (
