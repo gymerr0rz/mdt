@@ -40,6 +40,7 @@ const Values = {
 export function ComboboxDemo({ children, placeholder, list }: Combobox) {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState('');
+  const [activeHover, setHover] = React.useState<null | string>(null);
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -60,6 +61,8 @@ export function ComboboxDemo({ children, placeholder, list }: Combobox) {
                   setValue(currentValue === value ? '' : currentValue);
                   setOpen(false);
                 }}
+                id="command-list"
+                onMouseOver={() => setHover(framework.description)}
               >
                 <span className="font-[600]">
                   {framework.label || framework.title}
@@ -74,6 +77,7 @@ export function ComboboxDemo({ children, placeholder, list }: Combobox) {
             ))}
           </CommandList>
         </Command>
+        <div className="text-xs text-1 py-3 px-1 w-full">{activeHover}</div>
       </PopoverContent>
     </Popover>
   );
