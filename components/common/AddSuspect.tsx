@@ -1,14 +1,5 @@
 import { Button } from '@/components/common/Button';
-import { Button as UIButton } from '@/components/ui/button';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import SearchPeoplePopup from './SearchPeoplePopup';
 
 export function DialogDemo() {

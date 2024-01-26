@@ -7,12 +7,12 @@ import Link from 'next/link';
 
 export default function SearchBarVehicle() {
   const [data] = React.useState<Vehicle[]>(Vehicles);
-  const [results, setResults] = React.useState<Vehicle[]>();
+  const [results, setResults] = React.useState<Vehicle[]>([]);
   const [inputValue, setValue] = React.useState<string>();
 
   React.useEffect(() => {
     const FilterResults = () => {
-      const value = inputValue;
+      const value = inputValue || '';
       setValue(value);
       const filteredData = data.filter((vehicle) =>
         vehicle.vehicle_plate.toLowerCase().includes(value?.toLowerCase())

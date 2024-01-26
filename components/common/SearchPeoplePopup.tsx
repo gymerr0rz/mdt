@@ -7,12 +7,12 @@ import Link from 'next/link';
 
 export default function SearchPeoplePopup() {
   const [data] = React.useState<Person[]>(Profiles);
-  const [results, setResults] = React.useState<Person[]>();
+  const [results, setResults] = React.useState<Person[]>([]);
   const [inputValue, setValue] = React.useState<string>();
 
   React.useEffect(() => {
     const FilterResults = () => {
-      const value = inputValue;
+      const value = inputValue || '';
       setValue(value);
       const filteredData = data.filter((person) =>
         person.name.toLowerCase().includes(value?.toLowerCase())
