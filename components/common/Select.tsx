@@ -9,6 +9,7 @@ import {
   CommandGroup,
   CommandInput,
   CommandItem,
+  CommandList,
   CommandShortcut,
 } from '@/components/ui/command';
 import {
@@ -50,30 +51,28 @@ export function ComboboxDemo({ children, placeholder, list }: Combobox) {
           <CommandInput placeholder={placeholder} />
 
           <CommandEmpty>No tags found.</CommandEmpty>
-          <div className="overflow-auto max-h-[300px]  ">
-            {list.map((framework) => (
-              <>
-                <CommandItem
-                  key={framework?.value || framework?.title}
-                  value={framework?.value || framework?.title}
-                  onSelect={(currentValue) => {
-                    setValue(currentValue === value ? '' : currentValue);
-                    setOpen(false);
-                  }}
-                >
-                  <span className={Values[framework.severity]}>
-                    {framework.label || framework.title}
-                  </span>
+          <CommandList className="overflow-auto max-h-[300px]">
+            {list.map((framework, idx) => (
+              <CommandItem
+                key={idx}
+                value={framework?.value || framework?.title}
+                onSelect={(currentValue) => {
+                  setValue(currentValue === value ? '' : currentValue);
+                  setOpen(false);
+                }}
+              >
+                <span className="font-[600]">
+                  {framework.label || framework.title}
+                </span>
 
-                  {framework.fine && (
-                    <CommandShortcut className="!text-xs">
-                      [${framework.fine}]
-                    </CommandShortcut>
-                  )}
-                </CommandItem>
-              </>
+                {framework.fine && (
+                  <CommandShortcut className="!text-xs">
+                    [${framework.fine}]
+                  </CommandShortcut>
+                )}
+              </CommandItem>
             ))}
-          </div>
+          </CommandList>
         </Command>
       </PopoverContent>
     </Popover>
