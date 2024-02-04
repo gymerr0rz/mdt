@@ -4,15 +4,24 @@ import React from 'react';
 import Profiles from '@/dummy-data/profiles.json';
 import { Person } from '@/types.db';
 import Link from 'next/link';
+import { useNuiEvent } from '../../hooks/useNuiEvent';
 
 export default function SearchBarPeople() {
   const [data] = React.useState<Person[]>(Profiles);
   const [results, setResults] = React.useState<Person[]>([]);
   const [inputValue, setValue] = React.useState<string>();
 
+  useNuiEvent('get-all-players', (data): void => {
+    console.log(data);
+    if (data.data) console.log(data.data);
+  });
+
   React.useEffect(() => {
+    // Implement the path if user is selected to remove the show.
+    const path = window.location.pathname;
+
     const FilterResults = () => {
-      const value = inputValue || '';
+      let value = inputValue || '';
       setValue(value);
       const filteredData = data.filter((person) =>
         person.name.toLowerCase().includes(value?.toLowerCase())
